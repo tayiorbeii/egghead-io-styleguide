@@ -1,0 +1,74 @@
+/* TYPOGRAPHY */
+
+/* 1. General */
+body {
+  font-family: 'proxima-nova';
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Headings */
+.fz1 {
+  font-size: 64px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.fz2 {
+  font-size: 42px;
+  line-height: 1.15;
+  font-weight: 300;
+}
+.fz3 {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.fz4 {
+  font-size: 24px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.fz5 {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.fz6 {
+  font-size: 15px;
+  line-height: 2.1;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  //&.text-limited-width
+}
+
+h1 {
+  @extend .fz1;
+}
+h2 {
+  @extend .fz2;
+}
+h3 {
+  @extend .fz3;
+}
+h4 {
+  @extend .fz4;
+}
+h5 {
+  @extend .fz5;
+}
+h6 {
+  @extend .fz6;
+}
+
+/* 3. Helpers */
+.title-limited-width {
+  max-width: 540px;
+}
+.text-limited-width {
+  max-width: 680px;
+}
+
+
