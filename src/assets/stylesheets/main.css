@@ -1,0 +1,12 @@
+
+/* MAIN */
+
+/* 1. Globals */
+@import '_globals/_tachyons.css';
+@import '_globals/_variables.css';
+
+/* 2. Shared */
+@import '_shared/_layout.css';
+@import '_shared/_buttons.css';
+
+
