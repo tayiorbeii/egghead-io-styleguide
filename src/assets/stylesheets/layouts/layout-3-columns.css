@@ -17,11 +17,11 @@ body {
   flex-direction: column;
   &--left {
     background: red;
-    flex-basis: 400px;
+    flex-basis: 600px;
   }
   &--right {
     background: green;
-    flex-basis: 600px;
+    flex-basis: 400px;
   }
   &--main {
     background: yellow;
