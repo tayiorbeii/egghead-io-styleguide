@@ -1,12 +1,11 @@
 'use strict';
 
-var gulp                   = require('gulp'),
-    postcss                = require('gulp-postcss'),
-    autoprefixer           = require('autoprefixer'),
-    cssnext                = require('cssnext'),
-    precss                 = require('precss'),
-    browserSync            = require('browser-sync').create(),
-    watch                  = require('gulp-watch');
+var gulp         = require('gulp'),
+    watch        = require('gulp-watch'),
+    browserSync  = require('browser-sync').create(),
+    postcss      = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    precss       = require('precss');
 
 var task = {};
 
@@ -46,27 +45,17 @@ gulp.task('html:build', task.html = function () {
 
 //Stylesheets
 gulp.task('stylesheets:build', task.stylesheets = function () {
-  //Обработаем postCSS плагинами наш css
   var processors = [
-    autoprefixer,
-    cssnext,
-    precss
+    precss,
+    autoprefixer({browsers: ['last 2 version']})
   ];
   gulp.src(path.src.stylesheets)
     .pipe(postcss(processors))
-    .pipe(gulp.dest(path.build.stylesheets)) //И в build
-    .pipe(browserSync.reload({ //Обновим окно браузера
+    .pipe(gulp.dest(path.build.stylesheets))
+    .pipe(browserSync.reload({
       stream: true
     }));
 });
-
-//CSS @import
-// var options = {};
-// gulp.task("import:build", function() {
-//   gulp.src(path.src.stylesheets)
-//     .pipe(cssimport(options))
-//     .pipe(gulp.dest(path.build.stylesheets));
-// });
 
 // FONTS
 gulp.task('fonts:build', task.fonts = function () {
@@ -86,7 +75,7 @@ gulp.task('vendors:build', task.vendors = function () {
     }));
 });
 
-//Images
+// IMAGES
 gulp.task('img:build', task.img = function () {
   gulp.src(path.src.img)
     .pipe(gulp.dest(path.build.img))
@@ -96,7 +85,7 @@ gulp.task('img:build', task.img = function () {
 });
 
 
-// Server
+// SERVER
 gulp.task('server:build', function() {
   browserSync.init({
     port : 3200,

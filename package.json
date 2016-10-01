@@ -17,14 +17,11 @@
   },
   "homepage": "https://github.com/Nagalsky/postCSS#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.0",
     "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.3.2",
-    "gulp-watch": "^4.3.9",
-    "autoprefixer": "^6.4.1",
-    "cssnext": "^1.8.4",
-    "gulp-cssimport": "^3.1.0",
     "gulp-postcss": "^6.2.0",
+    "gulp-watch": "^4.3.9",
     "precss": "^1.4.0"
   }
 }
