@@ -1,5 +1,5 @@
 {
-  "name": "postcss",
+  "name": "egghead.io styleguide",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nagalsky/postCSS.git"
+    "url": "git+https://github.com/eggheadio/egghead-io-styleguide"
   },
-  "author": "Nagalsky Nikita",
+  "author": "egghead.io",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nagalsky/postCSS/issues"
+    "url": "https://github.com/eggheadio/egghead-io-styleguide/issues"
   },
-  "homepage": "https://github.com/Nagalsky/postCSS#readme",
+  "homepage": "https://github.com/eggheadio/egghead-io-styleguide#readme",
   "devDependencies": {
     "autoprefixer": "^6.5.0",
     "browser-sync": "^2.16.0",
@@ -23,5 +23,8 @@
     "gulp-postcss": "^6.2.0",
     "gulp-watch": "^4.3.9",
     "precss": "^1.4.0"
+  },
+  "dependencies": {
+    "tachyons": "^4.5.3"
   }
 }

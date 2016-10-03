@@ -2,15 +2,11 @@
 /* MAIN */
 
 /* 1. Globals */
-@import '_globals/_tachyons.css';
+@import '../../../node_modules/tachyons/css/tachyons.css';
 @import '_globals/_variables.css';
 
 /* 2. Shared */
 @import '_shared/_layout.css';
 @import '_shared/_buttons.css';
-
-
-/* For Joel */
-@import 'layouts/layout-3-columns.css';
 
 
