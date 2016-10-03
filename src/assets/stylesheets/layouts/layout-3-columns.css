@@ -30,9 +30,6 @@ body {
   }
   &-inner {
     flex-grow: 1;
-    &--scrollable {
-      overflow-y: scroll;
-    }
   }
 }
 
