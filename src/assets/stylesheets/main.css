@@ -1,9 +1,11 @@
-
 /* MAIN */
 
 /* 1. Globals */
 @import '../../../node_modules/tachyons/css/tachyons.css';
 @import '_globals/_variables.css';
+@import '_globals/_colors.css';
+@import '_globals/_overrides.css';
+@import '_globals/_custom-helpers.css';
 
 /* 2. Shared */
 @import '_shared/_layout.css';

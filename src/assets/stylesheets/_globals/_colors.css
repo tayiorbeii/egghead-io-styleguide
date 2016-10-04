@@ -1,0 +1,53 @@
+/* COLORS */
+
+/* 1. Colors */
+.eh-charcoal {
+  color: $eh-charcoal;
+}
+.eh-purple {
+  color: $eh-purple;
+}
+.eh-silver {
+  color: $eh-silver;
+}
+.eh-gray {
+  color: $eh-gray;
+}
+.eh-orange {
+  color: $eh-orange;
+}
+.eh-blue {
+  color: $eh-blue;
+}
+.eh-green {
+  color: $eh-green;
+}
+.eh-red {
+  color: $eh-red;
+}
+
+/* 2. Background Colors */
+.eh-bg-charcoal {
+  background-color: $eh-charcoal;
+}
+.eh-bg-purple {
+  background-color: $eh-purple;
+}
+.eh-bg-silver {
+  background-color: $eh-silver;
+}
+.eh-bg-gray {
+  background-color: $eh-gray;
+}
+.eh-bg-orange {
+  background-color: $eh-orange;
+}
+.eh-bg-blue {
+  background-color: $eh-blue;
+}
+.eh-bg-green {
+  background-color: $eh-green;
+}
+.eh-bg-red {
+  background-color: $eh-red;
+}
