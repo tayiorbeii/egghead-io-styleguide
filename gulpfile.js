@@ -99,7 +99,6 @@ gulp.task('server:build', function() {
 gulp.task('build', [
   'stylesheets:build',
   'html:build',
-  'server:build',
   'img:build',
   'vendors:build',
   'fonts:build'
@@ -123,4 +122,4 @@ gulp.task('watch', function () {
   });
 });
 
-gulp.task('default', ['build', 'watch']);
+gulp.task('default', ['build', 'server:build', 'watch']);
