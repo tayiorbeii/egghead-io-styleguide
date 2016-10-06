@@ -1,5 +1,5 @@
 {
-  "name": "egghead.io styleguide",
+  "name": "egghead-styleguide",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,6 +25,7 @@
     "precss": "^1.4.0"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "tachyons": "^4.5.3"
   }
 }
