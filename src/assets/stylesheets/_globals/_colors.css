@@ -1,6 +1,9 @@
 /* COLORS */
 
 /* 1. Colors */
+.eh-white {
+  color: $eh-white;
+}
 .eh-charcoal {
   color: $eh-charcoal;
 }
@@ -27,6 +30,9 @@
 }
 
 /* 2. Background Colors */
+.eh-bg-white {
+  background-color: $eh-white;
+}
 .eh-bg-charcoal {
   background-color: $eh-charcoal;
 }
@@ -50,4 +56,15 @@
 }
 .eh-bg-red {
   background-color: $eh-red;
+}
+
+/* 3. Border Colors */
+.eh-b--blue {
+  border-color: $eh-blue;
+}
+.eh-b--green {
+  border-color: $eh-green;
+}
+.eh-b--charcoal {
+  border-color: $eh-charcoal;
 }

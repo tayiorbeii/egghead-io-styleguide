@@ -1,1 +1,14 @@
 /* BUTTONS */
+
+.eh-btn-secondary {
+  &:hover {
+    color: $eh-white;
+    background: $eh-blue;
+  }
+}
+.eh-btn-tertiary {
+  &:hover {
+   color: $eh-white;
+   background: $eh-charcoal;
+ }
+}

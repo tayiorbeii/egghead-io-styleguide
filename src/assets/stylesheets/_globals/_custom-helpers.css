@@ -4,6 +4,9 @@
 .eh-minw-12 {
   min-width: 12rem;
 }
+.eh-minw-17 {
+  min-width: 17rem;
+}
 
 .border-box {
   box-sizing: border-box;
