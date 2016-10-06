@@ -6,7 +6,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/dist'));
 
 if(process.env.NODE_ENV === 'production') {
-  server.use('/path', function(req, res, next) {  
+  app.use('/path', function(req, res, next) {  
   if(!req.secure) {
     var secureUrl = "https://" + req.headers['host'] + req.url; 
     res.writeHead(301, { "Location":  secureUrl });
