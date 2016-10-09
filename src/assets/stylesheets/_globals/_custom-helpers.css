@@ -16,3 +16,23 @@
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+/* 3. Typography */
+.eh-f1 {
+  font-size: 4rem;
+}
+.eh-f2 {
+  font-size: 2.625rem;
+}
+.eh-f3 {
+  font-size: 1.75rem;
+}
+.eh-f4 {
+  font-size: 1.5rem;
+}
+.eh-f5 {
+  font-size: 1.25rem;
+}
+.eh-f6 {
+  font-size: 0.935rem;
+}
