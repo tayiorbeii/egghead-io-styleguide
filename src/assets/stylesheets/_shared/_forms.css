@@ -1,0 +1,29 @@
+/* FORMS */
+
+/* 0. Silent Placeholders */
+%eh-input-state {
+  border-width: 2px;
+  padding: calc(1rem - 1px);
+}
+
+/* 1. Inputs */
+.eh-input {
+  &:focus {
+    border-color: #9da7b5;
+    outline: none;
+  }
+  &.eh-input-disabled {
+    background: #d8dde5;
+    border-color: $eh-silver;
+  }
+  &.eh-input-error {
+    @extend %eh-input-state;
+    border-color: $eh-red;
+    background: color($eh-red a(30%));
+  }
+  &.eh-input-success {
+    @extend %eh-input-state;
+    border-color: $eh-green;
+    background: color($eh-green a(30%));
+  }
+}

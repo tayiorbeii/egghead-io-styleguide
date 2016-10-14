@@ -1,9 +1,6 @@
 /* COLORS */
 
 /* 1. Colors */
-.eh-white {
-  color: $eh-white;
-}
 .eh-charcoal {
   color: $eh-charcoal;
 }
@@ -15,6 +12,9 @@
 }
 .eh-gray {
   color: $eh-gray;
+}
+.eh-white {
+  color: $eh-white;
 }
 .eh-orange {
   color: $eh-orange;
@@ -67,4 +67,7 @@
 }
 .eh-b--charcoal {
   border-color: $eh-charcoal;
+}
+.eh-b--silver {
+  border-color: $eh-silver;
 }

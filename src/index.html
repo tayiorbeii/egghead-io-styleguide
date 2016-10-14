@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="assets/stylesheets/main.css">
 </head>
 
-<body class="avenir fw4">
+<body class="avenir fw4 eh-charcoal">
   <div class="pa3">
     <!-- Buttons -->
     <div class="mb7">
@@ -84,31 +84,34 @@
       </div>
     </div>
 
-    <!-- Typography -->
+    <!-- Forms -->
     <div class="mb7">
-      <h2 class="f2 lh-title ttu bb b--black pb2 mb4">2. Typography</h2>
+      <h2 class="f2 lh-title ttu bb b--black pb2 mb4">2. Form elements</h2>
+      <div class="mb4">
+        <h4 class="f4 lh-title ttu mb0">2.1 Inputs</h4>
+      </div>
       <div class="flex items-baseline mb4">
-        <div class="w-10">
-          <h1 class="eh-f1 lh-title fw6 ma0">H1</h1>
-        </div>
-        <div class="w-90">
-          <h1 class="eh-f1 lh-title fw6 measure ma0">Headlines & Titles 540 px Width</h1>
+        <div class="w-100">
+          <label class="db f4 lh-copy mb2">Regular field</label>
+          <input type="text" class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input" placeholder="Placeholder text">
         </div>
       </div>
       <div class="flex items-baseline mb4">
-        <div class="w-10">
-          <h2 class="eh-f2 lh-title fw6 ma0">H2</h2>
-        </div>
-        <div class="w-90">
-          <h2 class="eh-f2 lh-title fw6 measure ma0">Curabitur sagittis at felis ac pretium,nullam ut metus rutrum</h2>
+        <div class="w-100">
+          <label class="db f4 lh-copy mb2">Disabled</label>
+          <input type="text" disabled class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input eh-input-disabled" placeholder="Placeholder text">
         </div>
       </div>
       <div class="flex items-baseline mb4">
-        <div class="w-10">
-          <h3 class="eh-f3 lh-title fw6 ma0">H3</h3>
+        <div class="w-100">
+          <label class="db f4 lh-copy mb2">Error</label>
+          <input type="text" class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input eh-input-error" placeholder="Placeholder text">
         </div>
-        <div class="w-90">
-          <h3 class="eh-f3 lh-title fw6 measure ma0">Paragraph Names, Titles 540 px Width, Shortest Title Class - Paragraph Names…</h3>
+      </div>
+      <div class="flex items-baseline mb4">
+        <div class="w-100">
+          <label class="db f4 lh-copy mb2">Success</label>
+          <input type="text" class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input eh-input-success" placeholder="Placeholder text">
         </div>
       </div>
     </div>
