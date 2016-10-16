@@ -2,6 +2,7 @@
 
 /* 1. Globals */
 @import '../../../node_modules/tachyons/css/tachyons.css';
+@import '_globals/_fonts.css';
 @import '_globals/_variables.css';
 @import '_globals/_colors.css';
 @import '_globals/_overrides.css';

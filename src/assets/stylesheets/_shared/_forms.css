@@ -1,5 +1,24 @@
 /* FORMS */
 
+@define-mixin placeholder $color {
+  &::-webkit-input-placeholder {
+    color: $(color);
+    transition: 150ms;
+  }
+  &::-moz-placeholder {
+     color: $(color);
+     transition: 150ms;
+  }
+  &:-ms-input-placeholder {
+     color: $(color);
+     transition: 150ms;
+  }
+  &:-moz-placeholder {
+     color: $(color);
+     transition: 150ms;
+  }
+}
+
 /* 0. Silent Placeholders */
 %eh-input-state {
   border-width: 2px;
@@ -9,6 +28,7 @@
 /* 1. Inputs */
 .eh-input {
   &:focus {
+    @mixin placeholder transparent;
     border-color: #9da7b5;
     outline: none;
   }
@@ -25,5 +45,57 @@
     @extend %eh-input-state;
     border-color: $eh-green;
     background: color($eh-green a(30%));
+  }
+}
+
+.eh-checkbox {
+  overflow: hidden;
+  cursor: pointer;
+  .eh-checkbox-input {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    position: absolute;
+    left: -10px;
+    &:checked {
+      & + .eh-checkbox-icon {
+        @extend .fa;
+        @extend .fa-check;
+        background:#5c566e;
+        border-color: #5c566e;
+        color: $eh-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+      }
+    }
+  }
+  .eh-checkbox-icon {
+    width: 21px;
+    height: 21px;
+    background: #fafafa;
+    border:1px solid #bec7d4;
+    border-radius:3px;
+    margin-right: 15px;
+  }
+  .eh-checkbox-label {
+  }
+  &.eh-input-disabled {
+    cursor: not-allowed;
+    color: #565763;
+    .eh-checkbox-input {
+      &:checked {
+        & + .eh-checkbox-icon {
+          background: #dddddd;
+          border-color: #bec7d4;
+          color: #babbbf;
+        }
+      }
+    }
+    .eh-checkbox-icon {
+     background: #dddddd;
+     border-color: #bec7d4;
+    }
   }
 }
