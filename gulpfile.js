@@ -47,7 +47,7 @@ gulp.task('html:build', task.html = function () {
 gulp.task('stylesheets:build', task.stylesheets = function () {
   var processors = [
     precss,
-    autoprefixer({browsers: ['last 2 version']})
+    autoprefixer({browsers: ['last 3 version']})
   ];
   gulp.src(path.src.stylesheets)
     .pipe(postcss(processors))
