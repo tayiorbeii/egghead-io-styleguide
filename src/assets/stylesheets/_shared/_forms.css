@@ -29,9 +29,11 @@
   }
 }
 
+/* 2. Checkboxes and Radios */
 .eh-checkbox {
   overflow: hidden;
   cursor: pointer;
+  display: inline-flex;
   .eh-checkbox-input {
     width: 1px;
     height: 1px;
@@ -64,7 +66,7 @@
   }
   &.eh-input-disabled {
     cursor: not-allowed;
-    color: #565763;
+    opacity: 0.8;
     .eh-checkbox-input {
       &:checked {
         & + .eh-checkbox-icon {
@@ -77,6 +79,44 @@
     .eh-checkbox-icon {
      background: #dddddd;
      border-color: #bec7d4;
+    }
+  }
+}
+
+/* 3. Switches */
+.eh-switch {
+  width: 60px;
+  height: 22px;
+  border: 1px solid #d1d8e1;
+  background: #fafafa;
+  border-radius: 11px;
+  position: relative;
+  transition: 150ms;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  &:before {
+    content: '';
+    position: absolute;
+    transition: 300ms ease-in-out;
+    top: 4px;
+    left: 2px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 0px 1px #c5ccd9,
+                0 0 0px 10px #ffffff,
+                0 0 0px 11px #c5ccd9;
+  }
+  &.on {
+    background: #9acf79;
+    border-color: #9acf79;
+    &:before {
+      left: calc(100% - 14px);
+      box-shadow: 0 0 0px 1px #92ca6e,
+      0 0 0px 10px #ffffff,
+      0 0 0px 11px #c5ccd9;
     }
   }
 }
