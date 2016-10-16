@@ -1,24 +1,5 @@
 /* FORMS */
 
-@define-mixin placeholder $color {
-  &::-webkit-input-placeholder {
-    color: $(color);
-    transition: 150ms;
-  }
-  &::-moz-placeholder {
-     color: $(color);
-     transition: 150ms;
-  }
-  &:-ms-input-placeholder {
-     color: $(color);
-     transition: 150ms;
-  }
-  &:-moz-placeholder {
-     color: $(color);
-     transition: 150ms;
-  }
-}
-
 /* 0. Silent Placeholders */
 %eh-input-state {
   border-width: 2px;
