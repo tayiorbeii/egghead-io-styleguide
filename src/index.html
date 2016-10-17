@@ -167,9 +167,7 @@
               for (var i = 0; i < switchOptionsList.length; i++) {
                 for (var j = 0; j < switchOptionsList[i].children.length; j++) {
                   switchOptionsList[i].children[j].addEventListener('click', function() {
-                    if (hasClass(this, 'active')) {
-                      return false;
-                    } else {
+                    if (!hasClass(this, 'active')) {
                       this.closest('.eh-switch-options').classList.toggle('switched');
                       var childrenList = this.closest('.eh-switch-options').children;
                       for (var k = 0; k < childrenList.length; k++) {
