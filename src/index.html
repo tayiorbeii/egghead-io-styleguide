@@ -132,14 +132,14 @@
             <label class="flex items-center lh-title eh-checkbox eh-input-disabled">
               <input type="checkbox" class="eh-checkbox-input" disabled />
               <i class="eh-checkbox-icon"></i>
-              <span class="eh-checkbox-label">Ololo</span>
+              <span class="eh-checkbox-label">Disabled</span>
             </label>
           </div>
           <div class="w-25">
             <label class="flex items-center lh-title eh-checkbox eh-input-disabled">
               <input type="checkbox" class="eh-checkbox-input" checked disabled />
               <i class="eh-checkbox-icon"></i>
-              <span class="eh-checkbox-label">Ololo</span>
+              <span class="eh-checkbox-label">Checked and disabled</span>
             </label>
           </div>
         </div>
@@ -149,9 +149,38 @@
         <h4 class="f4 lh-title ttu mb3">2.3 Switches</h4>
         <div class="flex items-center mb4">
           <div class="w-50">
-            <div class="eh-switch-options">
 
+            <div class="eh-switch-options">
+              <div class="option option-first active">Option 1</div>
+              <div class="option option-second">Option 2</div>
             </div>
+            <div class="eh-switch-options">
+              <div class="option option-first active">Option 1</div>
+              <div class="option option-second">Option 2</div>
+            </div>
+            <script>
+              function hasClass(element, cls) {
+                return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+              }
+              var switchOptionsList = document.getElementsByClassName('eh-switch-options');
+              for (var i = 0; i < switchOptionsList.length; i++) {
+                for (var j = 0; j < switchOptionsList[i].children.length; j++) {
+                  switchOptionsList[i].children[j].addEventListener('click', function() {
+                    if (hasClass(this, 'active')) {
+                      return false;
+                    } else {
+                      this.closest('.eh-switch-options').classList.toggle('switched');
+                      var childrenList = this.closest('.eh-switch-options').children;
+                      for (var k = 0; k < childrenList.length; k++) {
+                        childrenList[k].classList.remove('active');
+                      }
+                      this.classList.add('active');
+                    }
+                  })
+                }
+              }
+            </script>
+
           </div>
           <div class="w-25">
             <div class="eh-switch"></div>
@@ -160,9 +189,9 @@
             <div class="eh-switch on"></div>
           </div>
           <script>
-            var switchElem = document.getElementsByClassName('eh-switch');
-            for (var i = 0; i < switchElem.length; i++) {
-              switchElem[i].addEventListener('click', function () {
+            var switchElems = document.getElementsByClassName('eh-switch');
+            for (var i = 0; i < switchElems.length; i++) {
+              switchElems[i].addEventListener('click', function () {
                 this.classList.toggle('on');
               })
             }
