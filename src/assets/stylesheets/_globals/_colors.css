@@ -1,73 +1,95 @@
 /* COLORS */
 
 /* 1. Colors */
-.eh-charcoal {
+.eh-charcoal,
+.eh-hover-charcoal:hover {
   color: $eh-charcoal;
 }
-.eh-purple {
+.eh-purple,
+.eh-hover-purple:hover {
   color: $eh-purple;
 }
-.eh-silver {
+.eh-silver,
+.eh-hover-silver:hover {
   color: $eh-silver;
 }
-.eh-gray {
+.eh-gray,
+.eh-hover-gray:hover {
   color: $eh-gray;
 }
-.eh-white {
+.eh-white,
+.eh-hover-white:hover {
   color: $eh-white;
 }
-.eh-orange {
+.eh-orange,
+.eh-hover-orange:hover {
   color: $eh-orange;
 }
-.eh-blue {
+.eh-blue,
+.eh-hover-blue:hover {
   color: $eh-blue;
 }
-.eh-green {
+.eh-green,
+.eh-hover-green:hover {
   color: $eh-green;
 }
-.eh-red {
+.eh-red,
+.eh-hover-red:hover {
   color: $eh-red;
 }
 
 /* 2. Background Colors */
-.eh-bg-white {
+.eh-bg-white,
+.eh-hover-bg-white:hover {
   background-color: $eh-white;
 }
-.eh-bg-charcoal {
+.eh-bg-charcoal,
+.eh-hover-bg-charcoal:hover {
   background-color: $eh-charcoal;
 }
-.eh-bg-purple {
+.eh-bg-purple,
+.eh-hover-bg-purple:hover {
   background-color: $eh-purple;
 }
-.eh-bg-silver {
+.eh-bg-silver,
+.eh-hover-bg-silver:hover {
   background-color: $eh-silver;
 }
-.eh-bg-gray {
+.eh-bg-gray,
+.eh-hover-bg-gray:hover {
   background-color: $eh-gray;
 }
-.eh-bg-orange {
+.eh-bg-orange,
+.eh-hover-bg-orange:hover {
   background-color: $eh-orange;
 }
-.eh-bg-blue {
+.eh-bg-blue,
+.eh-hover-bg-blue:hover {
   background-color: $eh-blue;
 }
-.eh-bg-green {
+.eh-bg-green,
+.eh-hover-bg-green:hover {
   background-color: $eh-green;
 }
-.eh-bg-red {
+.eh-bg-red,
+.eh-hover-bg-red:hover {
   background-color: $eh-red;
 }
 
 /* 3. Border Colors */
-.eh-b--blue {
+.eh-b--blue,
+.eh-hover-b--blue {
   border-color: $eh-blue;
 }
-.eh-b--green {
+.eh-b--green,
+.eh-hover-b--blue {
   border-color: $eh-green;
 }
-.eh-b--charcoal {
+.eh-b--charcoal,
+.eh-hover-b--blue {
   border-color: $eh-charcoal;
 }
-.eh-b--silver {
+.eh-b--silver,
+.eh-hover-b--blue {
   border-color: $eh-silver;
 }
