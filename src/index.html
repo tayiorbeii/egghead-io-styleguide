@@ -218,20 +218,31 @@
         <h4 class="f4 lh-title ttu mb3">2.3 Select Boxes</h4>
         <div class="flex items-center mb4">
           <div class="w-33">
-            <div class="inline-flex flex-column lh-copy br2 ba eh-b--silver eh-bg-charcoal eh-select-box">
-              <div class="flex items-center w-100 eh-flex-shrink--0 flex-auto">
+            <div class="inline-flex flex-column lh-copy relative eh-select-box">
+              <div class="flex items-center w-100 br2 ba eh-b--silver eh-flex-shrink--0 flex-auto">
                 <div class="pv3 ph3 f4 eh-flex-grow--1">Placeholder text...</div>
-                <div class="flex items-center justify-center self-stretch f4 pv3 ph3 w3 bl pointer eh-b--silver">
+                <div class="flex items-center justify-center self-stretch f4 pv3 ph3 w3 bl pointer eh-b--silver eh-select-box-trigger">
                   <i class="fa fa-angle-down"></i>
                 </div>
               </div>
-              <ul class="list pa0 ma0">
-                <li class="pv3 ph3 f4 bt eh-b--silver">Option 1</li>
-                <li class="pv3 ph3 f4 bt eh-b--silver">Option 2</li>
-                <li class="pv3 ph3 f4 bt eh-b--silver">Option 3</li>
-                <li class="pv3 ph3 f4 bt eh-b--silver">Option 4</li>
+              <ul class="list pa0 ma0 br2 br--bottom absolute w-100 ba bt-0 eh-b--silver dn">
+                <li class="pv3 ph3 f4 bt eh-b--silver pointer eh-hover-bg-charcoal eh-hover-white">Option 1</li>
+                <li class="pv3 ph3 f4 bt eh-b--silver pointer eh-hover-bg-charcoal eh-hover-white">Option 2</li>
+                <li class="pv3 ph3 f4 bt eh-b--silver pointer eh-hover-bg-charcoal eh-hover-white">Option 3</li>
+                <li class="pv3 ph3 f4 bt eh-b--silver pointer eh-hover-bg-charcoal eh-hover-white">Option 4</li>
               </ul>
             </div>
+            <script>
+              var selectBoxes = document.getElementsByClassName('eh-select-box');
+              for (var i = 0; i < selectBoxes.length; i++) {
+                selectBoxes[i].addEventListener('click', function() {
+                  var dropdownList = this.getElementsByTagName('ul');
+                  var valueField = this.children;
+                  dropdownList[0].classList.toggle('dn');
+                  valueField[0].classList.toggle('br--top');
+                })
+              }
+            </script>
           </div>
           <div class="w-33">
             1213
