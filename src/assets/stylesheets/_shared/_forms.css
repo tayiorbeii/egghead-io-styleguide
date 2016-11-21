@@ -1,8 +1,43 @@
 /* FORMS */
 
+:root {
+  --black: #000;
+  --white: #fff;
+
+  --transparent:transparent;
+
+  --navy: #1b1f24;
+  --light-navy: #292f36;
+  --dark-gray: #434b56;
+  --gray: #646e7b;
+  --light-gray: #d1d2d3;
+  --yellow: #ffce51;
+  --orange: #f59e33;
+  --dark-orange: #df6941;
+  --tag-orange: #fef3e7;
+  --dark-blue: #0064af;
+  --blue: #009dcf;
+  --tag-blue: #edf0ff;
+  --dark-green: #3ab66e;
+  --green: #add960;
+  --turquoise: #42c2b3;
+  --tag-turquoise: #d9f3f0;
+  --dark-red: #8f1233;
+  --red: #e13f58;
+}
+
 .eh-text-field {
   font-size: 1.125em;
-  line-height: 2em;
+  @mixin placeholder gray;
+  &:focus {
+   @mixin placeholder transparent;
+  }
+  &.disabled {
+    border-color: var(--light-navy);
+    background: var(--navy);
+    color: var(--gray);
+    cursor: not-allowed;
+  }
 }
 
 /*!* 0. Silent Placeholders *!*/

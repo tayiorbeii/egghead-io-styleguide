@@ -282,8 +282,6 @@
 .hover-dark-blue:focus { color: var(--dark-blue); }
 .hover-blue:hover,
 .hover-blue:focus { color: var(--blue); }
-.hover-light-blue:hover,
-.hover-light-blue:focus { color: var(--light-blue); }
 .hover-dark-green:hover,
 .hover-dark-green:focus { color: var(--dark-green); }
 .hover-green:hover,
@@ -321,8 +319,6 @@
 .hover-bg-dark-blue:focus { background-color: var(--dark-blue); }
 .hover-bg-blue:hover,
 .hover-bg-blue:focus { background-color: var(--blue); }
-.hover-bg-light-blue:hover,
-.hover-bg-light-blue:focus { background-color: var(--light-blue); }
 .hover-bg-dark-green:hover,
 .hover-bg-dark-green:focus { background-color: var(--dark-green); }
 .hover-bg-green:hover,
