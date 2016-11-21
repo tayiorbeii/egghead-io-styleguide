@@ -1,18 +1,1 @@
 /* VARIABLES */
-
-/* 1. Colors Palette */
-$eh-charcoal: #393f47;
-$eh-purple:   #6f748a;
-$eh-silver:   #bec7d5;
-$eh-gray:     #f7f9fa;
-$eh-white:    #ffffff;
-$eh-orange:   #fcc965;
-$eh-blue:     #32c1d0;
-$eh-green:    #99cf76;
-$eh-red:      #ff6a67;
-
-
-/* 2. Colors Definition */
-$eh-color-text:    $eh-charcoal;
-$eh-color-success: $eh-blue;
-$eh-color-warning: $eh-red;
