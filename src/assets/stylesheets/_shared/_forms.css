@@ -1,5 +1,10 @@
 /* FORMS */
 
+.eh-text-field {
+  font-size: 1.125em;
+  line-height: 2em;
+}
+
 /*!* 0. Silent Placeholders *!*/
 /*%eh-input-state {*/
   /*border-width: 2px;*/

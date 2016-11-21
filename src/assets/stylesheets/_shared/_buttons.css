@@ -1,7 +1,6 @@
 /* BUTTONS */
 
 .eh-btn {
-  line-height: 2rem;
   min-width: 140px;
   height: 3rem;
 }
@@ -12,9 +11,6 @@
 }
 
 .eh-cta {
-  line-height: 2rem;
   min-width: 280px;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
   height: 5rem;
 }
