@@ -39,6 +39,24 @@
     cursor: not-allowed;
   }
 }
+.eh-input-tooltip:before {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0px 8px 9px 8px;
+  border-color: transparent transparent #ffffff transparent;
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: -9px;
+}
+.eh-input-status-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  top: 1.25rem;
+  right: 1.25rem;
+}
 
 /*!* 0. Silent Placeholders *!*/
 /*%eh-input-state {*/

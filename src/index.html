@@ -96,30 +96,96 @@
     </section>
 
     <section class="mb6">
-      <h2 class="f3 fw6 lh-copy ttu white mt0 mb5">2. Inputs</h2>
+      <h2 class="f3 fw6 lh-copy ttu white mt0 mb1">2. Inputs</h2>
 
-      <div class="mb5 flex w-100">
-        <div class="w-33 pr4">
-          <div class="eh-text-field">
+      <div class="mb5 flex flex-wrap w-100">
+        <div class="w-33 pr4 mt4">
+          <div class="relative eh-text-field">
             <label class="db f4 fw5 lh-copy mb2">Empty Field</label>
             <div class="eh-text-field-wrapper">
-              <input type="text" class="db w-100 ph3 pv3 lh-copy br2 white ba b--gray bg-dark-navy focus-b--gray eh-text-field">
+              <input type="text" class="db w-100 pl3 pr5 pv3 lh-copy br2 white bg-dark-navy ba b--gray focus-b--gray eh-text-field">
             </div>
           </div>
         </div>
-        <div class="w-33 ph3">
-          <div class="eh-text-field">
+        <div class="w-33 ph3 mt4">
+          <div class="relative eh-text-field">
             <label class="db f4 fw5 lh-copy mb2">Field with Placeholder</label>
             <div class="eh-text-field-wrapper">
-              <input type="text" class="db w-100 ph3 pv3 lh-copy br2 white ba b--gray bg-dark-navy focus-b--gray eh-text-field" placeholder="Placeholder">
+              <input type="text" class="db w-100 pl3 pr5 pv3 lh-copy br2 white bg-dark-navy ba b--gray focus-b--gray eh-text-field" placeholder="Placeholder">
             </div>
           </div>
         </div>
-        <div class="w-33 pl4">
-          <div class="eh-text-field">
+        <div class="w-33 pl4 mt4">
+          <div class="relative eh-text-field">
             <label class="db f4 fw5 lh-copy mb2">Disabled Field</label>
             <div class="eh-text-field-wrapper">
-              <input type="text" disabled class="db w-100 ph3 pv3 lh-copy br2 white ba b--gray bg-dark-navy focus-b--gray eh-text-field disabled" value="Egghead">
+              <input type="text" disabled class="db w-100 pl3 pr5 pv3 lh-copy br2 white bg-dark-navy ba b--gray focus-b--gray eh-text-field disabled" value="Egghead">
+            </div>
+          </div>
+        </div>
+        <div class="w-33 pr4 mt4">
+          <div class="relative eh-text-field">
+            <label class="db f4 fw5 lh-copy mb2">Error*</label>
+            <div class="relative eh-text-field-wrapper">
+              <input type="text" class="db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy red ba b--red focus-b--red eh-text-field" value="With Error">
+
+              <div class="absolute br-pill flex justify-center items-center red eh-input-status-icon">
+                <i class="fa fa-times-circle"></i>
+              </div>
+
+              <div class="db red f5 sans-serif mt3">Password must contain at least 8 characters.</div>
+            </div>
+          </div>
+        </div>
+        <div class="w-33 ph3 mt4">
+          <div class="eh-text-field">
+            <label class="db f4 fw5 lh-copy mb2">Success*</label>
+            <div class="relative eh-text-field-wrapper">
+              <input type="password" class="db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy white ba b--green focus-b--green eh-text-field" value="********">
+
+              <div class="absolute br-pill flex justify-center items-center green eh-input-status-icon">
+                <i class="fa fa-check-circle"></i>
+              </div>
+
+              <div class="absolute db br2 w-100 mt4 pa3 sans-serif navy bg-white eh-input-tooltip">
+                <h5 class="f5 normal ma0 mb3">Password Strength: <strong class="fw-5">Good</strong></h5>
+                <div class="w-100 mb3 br-pill overflow-hidden bg-light-gray">
+                  <div class="bg-blue pa1 w-50"></div>
+                </div>
+                <div class="f6 lh-copy">Use at least 8 characters. Don’t use a password from another site, or somethings too obvious like your pet’s name. <a href="#" class="orange mh1">Why?</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-33 pr4 mt4 flex flex-wrap relative">
+          <div class="w-33 relative">
+            <div class="absolute br-pill flex justify-center content-start green eh-input-status-icon">
+              <i class="fa fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="w-33 relative">
+            <div class="absolute br-pill flex justify-center items-center blue eh-input-status-icon">
+              <i class="fa fa-plus-circle"></i>
+            </div>
+          </div>
+          <div class="w-33 relative">
+            <div class="absolute br-pill flex justify-center items-center light-gray eh-input-status-icon">
+              <i class="fa fa-minus-circle"></i>
+            </div>
+          </div>
+          <div class="w-33 relative">
+            <div class="absolute br-pill flex justify-center items-center red eh-input-status-icon">
+              <i class="fa fa-times-circle"></i>
+            </div>
+          </div>
+          <div class="w-33 relative">
+            <div class="absolute br-pill flex justify-center items-center red eh-input-status-icon">
+              <i class="fa fa-exclamation-circle"></i>
+            </div>
+          </div>
+          <div class="w-33 relative">
+            <div class="absolute br-pill flex justify-center items-center yellow eh-input-status-icon">
+              <i class="fa fa-question-circle"></i>
             </div>
           </div>
         </div>
@@ -134,76 +200,6 @@
 
 
   <div class="pa3">
-    <!-- Buttons -->
-    <div class="mb6">
-      <h2 class="f2 lh-title ttu bb b--black pb2 mb4">1. Buttons</h2>
-      <div class="mb5">
-        <h4 class="f4 lh-title ttu mb3">1.1 Usage scenario example</h4>
-        <p class="f4 gray mb3">"Create account" button is Primary. After click there is a Secondary "Continue" button leading to the next step in which you can go Back (Third), or Forward (Secondary). In the very final step there is a Call to Action "Finish" button.</p>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="link f4 dim lh-copy tc br2 ph3 pv3 dib white ba eh-b--blue eh-bg-blue eh-minw-12" href="">Primary</a>
-          </div>
-          <div class="w-two-thirds">Navigating to the new page/category.</div>
-        </div>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link lh-copy tc br2 ph3 pv3 dib ba eh-b--blue eh-blue eh-minw-12 eh-hover-white eh-hover-bg-blue" href="">Secondary</a>
-          </div>
-          <div class="w-two-thirds">Common navigation or/and show more purposes.</div>
-        </div>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link dim lh-copy tc br2 ph3 pv3 dib white ba eh-b--green eh-bg-green eh-minw-12" href="">Finish</a>
-          </div>
-          <div class="w-two-thirds">Finishing action.</div>
-        </div>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link lh-copy tc br2 ph3 pv3 dib ba eh-b--charcoal eh-charcoal eh-minw-12 eh-hover-white eh-hover-bg-charcoal" href="">Tertiary</a>
-          </div>
-          <div class="w-two-thirds">Navigation purposes, mostly for going back.</div>
-        </div>
-      </div>
-
-      <div class="mb5">
-        <h4 class="f4 lh-title ttu mb3">1.2 Call to Action Buttons</h4>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link dim lh-copy tc br2 ph3 eh-pv-1-and-5 dib white ba eh-b--blue eh-bg-blue eh-minw-17" href="">Browse our Library</a>
-          </div>
-          <div class="w-two-thirds"></div>
-        </div>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link dim lh-copy tc br2 ph3 eh-pv-1-and-5 dib white ba eh-b--green eh-bg-green eh-minw-17" href="">Become Pro Member</a>
-          </div>
-          <div class="w-two-thirds"></div>
-        </div>
-      </div>
-
-      <div class="mb5">
-        <h4 class="f4 lh-title ttu mb3">1.3 Commonly used</h4>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link dim lh-copy tc br2 ph3 pv2 dib white ba eh-b--red eh-bg-red eh-minw-8" href="">Cancel</a>
-          </div>
-          <div class="w-two-thirds"></div>
-        </div>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link dim lh-copy tc br2 ph3 pv2 dib white ba eh-b--orange eh-bg-orange eh-minw-8" href="">Edit</a>
-          </div>
-          <div class="w-two-thirds"></div>
-        </div>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <a class="f4 link dim lh-copy tc br2 ph3 pv2 dib white ba eh-b--green eh-bg-green eh-minw-8" href="">Add Comment</a>
-          </div>
-          <div class="w-two-thirds"></div>
-        </div>
-      </div>
-    </div>
 
     <!-- Forms -->
     <div class="mb6">
