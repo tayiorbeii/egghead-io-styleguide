@@ -95,7 +95,7 @@
       </div>
     </section>
 
-    <section class="mb6">
+    <section class="mb7">
       <h2 class="f3 fw6 lh-copy ttu white mt0 mb1">2. Inputs</h2>
 
       <div class="mb5 flex flex-wrap w-100">
@@ -192,6 +192,57 @@
       </div>
     </section>
 
+    <section class="mb6">
+      <h2 class="f3 fw6 lh-copy ttu white mt0 mb1">3. Checkboxes & Radios</h2>
+
+      <div class="mb5 flex flex-wrap w-100">
+        <div class="w-50 pr3 mt4">
+          <div>
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-checkbox">
+              <input type="checkbox" class="o-0 absolute left--1" />
+              <i class="mr3 br2 ba b--white hover-b--green eh-checkbox-icon"></i>Checkbox
+            </label>
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-checkbox ml5">
+              <input type="checkbox" class="o-0 absolute left--1" checked />
+              <i class="mr3 br2 ba b--white hover-b--green eh-checkbox-icon"></i>Checkbox
+            </label>
+          </div>
+          <div class="mt4">
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-checkbox disabled">
+              <input type="checkbox" class="o-0 absolute left--1" disabled />
+              <i class="mr3 br2 ba b--white hover-b--green eh-checkbox-icon"></i>Checkbox
+            </label>
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-checkbox disabled ml5">
+              <input type="checkbox" class="o-0 absolute left--1" disabled checked />
+              <i class="mr3 br2 ba b--white hover-b--green eh-checkbox-icon"></i>Checkbox
+            </label>
+          </div>
+        </div>
+        <div class="w-50 pl3 mt4">
+          <div>
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio">
+              <input type="radio" class="o-0 absolute left--1" name="radio" />
+              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
+            </label>
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio ml5">
+              <input type="radio" class="o-0 absolute left--1" name="radio" checked />
+              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
+            </label>
+          </div>
+          <div class="mt4">
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio disabled">
+              <input type="radio" class="o-0 absolute left--1" name="radio-disabled" disabled />
+              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
+            </label>
+            <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio disabled ml5">
+              <input type="radio" class="o-0 absolute left--1" name="radio-disabled-checked" disabled checked />
+              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <h2>===============================================</h2>
@@ -204,77 +255,56 @@
     <!-- Forms -->
     <div class="mb6">
       <h2 class="f2 lh-title ttu bb b--black pb2 mb4">2. Form elements</h2>
-      <div class="mb4">
-        <h4 class="f4 lh-title ttu mb3">2.1 Text Inputs</h4>
-        <div class="flex items-baseline flex-wrap">
-          <div class="w-50 mb4">
-            <label class="db lh-copy mb2">Regular field</label>
-            <input type="text" class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input" placeholder="Placeholder text">
-          </div>
-          <div class="w-50 mb4">
-            <label class="db lh-copy mb2">Disabled</label>
-            <input type="text" disabled class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input eh-input-disabled" placeholder="Placeholder text">
-          </div>
-          <div class="w-50 mb4">
-            <label class="db lh-copy mb2">Error</label>
-            <input type="text" class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input eh-input-error" placeholder="Placeholder text">
-          </div>
-          <div class="w-50 mb4">
-            <label class="db lh-copy mb2">Success</label>
-            <input type="text" class="input-reset f4 lh-copy pv3 ph3 br2 ba eh-b--silver eh-input eh-input-success" placeholder="Placeholder text">
-          </div>
-        </div>
-      </div>
 
-      <div class="mb5">
-        <h4 class="f4 lh-title ttu mb3">2.2 Checkboxes & Radio Buttons</h4>
-        <div class="flex items-center mb4">
-          <div class="w-25">
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox">
-              <input type="checkbox" class="o-0 absolute left--1" />
-              <i class="eh-checkbox-icon"></i>Checkbox
-            </label>
-            <br>
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio">
-              <input type="radio" class="o-0 absolute left--1" name="radio" />
-              <i class="eh-radio-icon"></i>Radio
-            </label>
-          </div>
-          <div class="w-25">
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox">
-              <input type="checkbox" class="o-0 absolute left--1" checked />
-              <i class="eh-checkbox-icon"></i>Checked
-            </label>
-            <br>
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio">
-              <input type="radio" class="o-0 absolute left--1" name="radio" checked />
-              <i class="eh-radio-icon"></i>Radio
-            </label>
-          </div>
-          <div class="w-25">
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox eh-input-disabled">
-              <input type="checkbox" class="o-0 absolute left--1" disabled />
-              <i class="eh-checkbox-icon"></i>Disabled
-            </label>
-            <br>
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio eh-input-disabled">
-              <input type="radio" class="o-0 absolute left--1" name="radio" disabled />
-              <i class="eh-radio-icon"></i>Radio
-            </label>
-          </div>
-          <div class="w-25">
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox eh-input-disabled">
-              <input type="checkbox" class="o-0 absolute left--1" checked disabled />
-              <i class="eh-checkbox-icon"></i>Checked and disabled
-            </label>
-            <br>
-            <label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio eh-input-disabled">
-              <input type="radio" class="o-0 absolute left--1" name="radio" checked disabled />
-              <i class="eh-radio-icon"></i>Radio
-            </label>
-          </div>
-        </div>
-      </div>
+      <!--<div class="mb5">-->
+        <!--<h4 class="f4 lh-title ttu mb3">2.2 Checkboxes & Radio Buttons</h4>-->
+        <!--<div class="flex items-center mb4">-->
+          <!--<div class="w-25">-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox">-->
+              <!--<input type="checkbox" class="o-0 absolute left&#45;&#45;1" />-->
+              <!--<i class="eh-checkbox-icon"></i>Checkbox-->
+            <!--</label>-->
+            <!--<br>-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio">-->
+              <!--<input type="radio" class="o-0 absolute left&#45;&#45;1" name="radio" />-->
+              <!--<i class="eh-radio-icon"></i>Radio-->
+            <!--</label>-->
+          <!--</div>-->
+          <!--<div class="w-25">-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox">-->
+              <!--<input type="checkbox" class="o-0 absolute left&#45;&#45;1" checked />-->
+              <!--<i class="eh-checkbox-icon"></i>Checked-->
+            <!--</label>-->
+            <!--<br>-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio">-->
+              <!--<input type="radio" class="o-0 absolute left&#45;&#45;1" name="radio" checked />-->
+              <!--<i class="eh-radio-icon"></i>Radio-->
+            <!--</label>-->
+          <!--</div>-->
+          <!--<div class="w-25">-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox eh-input-disabled">-->
+              <!--<input type="checkbox" class="o-0 absolute left&#45;&#45;1" disabled />-->
+              <!--<i class="eh-checkbox-icon"></i>Disabled-->
+            <!--</label>-->
+            <!--<br>-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio eh-input-disabled">-->
+              <!--<input type="radio" class="o-0 absolute left&#45;&#45;1" name="radio" disabled />-->
+              <!--<i class="eh-radio-icon"></i>Radio-->
+            <!--</label>-->
+          <!--</div>-->
+          <!--<div class="w-25">-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-checkbox eh-input-disabled">-->
+              <!--<input type="checkbox" class="o-0 absolute left&#45;&#45;1" checked disabled />-->
+              <!--<i class="eh-checkbox-icon"></i>Checked and disabled-->
+            <!--</label>-->
+            <!--<br>-->
+            <!--<label class="inline-flex items-center lh-title overflow-hidden pointer eh-radio eh-input-disabled">-->
+              <!--<input type="radio" class="o-0 absolute left&#45;&#45;1" name="radio" checked disabled />-->
+              <!--<i class="eh-radio-icon"></i>Radio-->
+            <!--</label>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
 
       <div class="mb5">
         <h4 class="f4 lh-title ttu mb3">2.3 Switches</h4>

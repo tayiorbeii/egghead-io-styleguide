@@ -6,6 +6,7 @@
 
   --transparent:transparent;
 
+  --dark-navy: #15191d;
   --navy: #1b1f24;
   --light-navy: #292f36;
   --dark-gray: #434b56;
@@ -25,6 +26,9 @@
   --dark-red: #8f1233;
   --red: #e13f58;
 }
+
+
+/* Text Fields */
 
 .eh-text-field {
   font-size: 1.125em;
@@ -58,6 +62,86 @@
   right: 1.25rem;
 }
 
+
+
+/* Checkboxes & Radios */
+
+.eh-checkbox {
+  input[type='checkbox'] {
+    &:checked {
+      & + .eh-checkbox-icon {
+        @extend .fa-check;
+        color: var(--navy);
+        background-color: var(--green);
+        border-color: var(--green);
+      }
+    }
+  }
+  &.disabled {
+    color: var(--gray);
+    cursor: not-allowed;
+    .eh-checkbox-icon {
+      border-color: var(--dark-gray);
+    }
+    input[type='checkbox'] {
+      &:checked {
+        & + .eh-checkbox-icon {
+          background-color: var(--dark-gray);
+          border-color: var(--dark-gray);
+        }
+      }
+    }
+  }
+}
+
+.eh-radio {
+  input[type='radio'] {
+    &:checked {
+      & + .eh-radio-icon {
+        background-color: var(--green);
+        border-color: var(--green);
+      }
+    }
+  }
+  &.disabled {
+    color: var(--gray);
+    cursor: not-allowed;
+    .eh-radio-icon {
+      border-color: var(--dark-gray);
+    }
+    input[type='radio'] {
+      &:checked {
+        & + .eh-radio-icon {
+          background-color: var(--dark-gray);
+          border-color: var(--dark-gray);
+        }
+      }
+    }
+  }
+}
+
+.eh-checkbox-icon,
+.eh-radio-icon {
+  width: 21px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eh-checkbox-icon {
+  @extend .fa;
+}
+.eh-radio-icon {
+  &:before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--navy);
+  }
+}
+
+
 /*!* 0. Silent Placeholders *!*/
 /*%eh-input-state {*/
   /*border-width: 2px;*/
@@ -67,145 +151,6 @@
   /*transition: all 150ms;*/
    /*!*transition: all 150ms cubic-bezier(0.895, 0.030, 0.685, 0.220);*/
    /*transition-timing-function: cubic-bezier(0.895, 0.030, 0.685, 0.220);*!*/
-/*}*/
-
-/*!* 1. Inputs *!*/
-/*.eh-input {*/
-  /*&:focus {*/
-    /*@mixin placeholder transparent;*/
-    /*border-color: #9da7b5;*/
-    /*outline: none;*/
-  /*}*/
-  /*&.eh-input-disabled {*/
-    /*background: #d8dde5;*/
-    /*border-color: $eh-silver;*/
-  /*}*/
-  /*&.eh-input-error {*/
-    /*@extend %eh-input-state;*/
-    /*border-color: $eh-red;*/
-    /*background: color($eh-red a(30%));*/
-  /*}*/
-  /*&.eh-input-success {*/
-    /*@extend %eh-input-state;*/
-    /*border-color: $eh-green;*/
-    /*background: color($eh-green a(30%));*/
-  /*}*/
-/*}*/
-
-/*!* 2. Checkboxes and Radios *!*/
-/*.eh-checkbox,*/
-/*.eh-radio {*/
-  /*input[type='checkbox'],*/
-  /*input[type='radio'] {*/
-    /*width: 1px;*/
-    /*height: 1px;*/
-  /*}*/
-  /*&.eh-input-disabled {*/
-    /*cursor: not-allowed;*/
-    /*opacity: 0.8;*/
-    /*.eh-checkbox-icon {*/
-      /*background: #dddddd;*/
-      /*border-color: #bec7d4;*/
-    /*}*/
-    /*.eh-radio-icon {*/
-      /*background: #dddddd;*/
-      /*border-color: #bec7d4;*/
-    /*}*/
-  /*}*/
-/*}*/
-
-/*.eh-checkbox {*/
-  /*input[type='checkbox'] {*/
-    /*&:checked {*/
-      /*& + .eh-checkbox-icon {*/
-        /*@extend .fa;*/
-        /*@extend .fa-check;*/
-        /*background:#5c566e;*/
-        /*border-color: #5c566e;*/
-        /*color: $eh-white;*/
-        /*font-size: 0.875rem;*/
-        /*display: flex;*/
-        /*justify-content: center;*/
-        /*align-items: center;*/
-      /*}*/
-    /*}*/
-  /*}*/
-  /*.eh-checkbox-icon {*/
-    /*width: 21px;*/
-    /*height: 21px;*/
-    /*background: #fafafa;*/
-    /*border:1px solid #bec7d4;*/
-    /*border-radius:3px;*/
-    /*margin-right: 15px;*/
-    /*&:before {*/
-      /*position: absolute;*/
-    /*}*/
-  /*}*/
-  /*&.eh-input-disabled {*/
-    /*input[type='checkbox'] {*/
-      /*&:checked {*/
-        /*& + .eh-checkbox-icon {*/
-          /*background: #dddddd;*/
-          /*border-color: #bec7d4;*/
-          /*color: #babbbf;*/
-        /*}*/
-      /*}*/
-    /*}*/
-    /*.eh-checkbox-icon {*/
-       /*background: #dddddd;*/
-       /*border-color: #bec7d4;*/
-    /*}*/
-  /*}*/
-/*}*/
-
-/*.eh-radio {*/
-  /*input[type='radio'] {*/
-    /*&:checked {*/
-      /*& + .eh-radio-icon {*/
-        /*display: flex;*/
-        /*justify-content: center;*/
-        /*align-items: center;*/
-        /*&:before {*/
-          /*content: '';*/
-          /*background: #5c566e;*/
-          /*border-radius: 50%;*/
-          /*width: 9px;*/
-          /*height: 9px;*/
-        /*}*/
-      /*}*/
-    /*}*/
-  /*}*/
-  /*.eh-radio-icon {*/
-    /*background: #fafafa;*/
-    /*border: 1px solid #bec7d4;*/
-    /*border-radius: 50%;*/
-    /*width: 21px;*/
-    /*height: 21px;*/
-    /*margin-right: 15px;*/
-    /*&:before {*/
-      /*position: absolute;*/
-    /*}*/
-  /*}*/
-  /*&.eh-input-disabled {*/
-    /*input[type='radio'] {*/
-      /*&:checked {*/
-        /*& + .eh-radio-icon {*/
-          /*background: #dddddd;*/
-          /*border-color: #bec7d4;*/
-            /*&:before {*/
-              /*background: #adadb1;*/
-            /*}*/
-        /*}*/
-      /*}*/
-    /*}*/
-    /*.eh-radio-icon {*/
-      /*background: #dddddd;*/
-      /*border-color: #bec7d4;*/
-      /*&:before {*/
-        /*background: #adadb1;*/
-      /*}*/
-    /*}*/
-  /*}*/
 /*}*/
 
 /*!* 3. Switches *!*/
