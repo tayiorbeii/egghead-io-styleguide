@@ -21,25 +21,7 @@ const outlineBtnClasses = {
   default: 'b--white white hover-dark-navy hover-bg-white'
 }
 
-class Button extends Component { 
-  static propTypes = {
-    href: PropTypes.string,
-    type: PropTypes.string,
-    size: PropTypes.string,
-    outline: PropTypes.bool,
-    children: PropTypes.node
-  }
-
-  static defaultProps = {
-    href: '',
-    type: 'default',
-    size: 'large',
-    outline: false,
-    children: 'Button'
-  }
-
-  render () {
-    const { href, type, size, outline, children } = this.props
+const Button = ({href='', type='default', size='large', outline=false, children='Button'}) => {
     const btnClasses = outline ? outlineBtnClasses[type] : solidBtnClasses[type]
     const sizeClasses = size === 'large' ? lgBtnClasses : smBtnClasses
 
@@ -48,7 +30,6 @@ class Button extends Component {
         {children}
       </a>
     )
-  }
 }
 
 export default Button
