@@ -142,6 +142,30 @@
 }
 
 
+/* Switchers */
+
+.eh-switcher {
+  min-width: 240px;
+  height: 40px;
+  position: relative;
+}
+.eh-switcher:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 50%;
+  z-index: 1;
+  height: 3rem;
+  background: var(--dark-blue);
+  border-radius: 1.5rem;
+  transition: all .15s ease-out;
+}
+.eh-switcher.switched:before {
+  left: 50%;
+}
+
+
 /*!* 0. Silent Placeholders *!*/
 /*%eh-input-state {*/
   /*border-width: 2px;*/
