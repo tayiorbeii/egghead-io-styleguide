@@ -1,0 +1,10 @@
+/* SELECT BOX */
+
+.eh-select-box {
+  background: #fafafa;
+  min-width: 280px;
+  ul {
+    top: calc(100% - 1px);
+    background: #fafafa;
+  }
+}

@@ -1,0 +1,51 @@
+/* Card Course */
+
+/* 0. Silent Placeholders */
+%card-shadows {
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    height: 7px;
+    border-radius: 0 0 5px 5px;
+    background: white;
+    box-shadow: 0px 2px 2px 0px rgba(86, 88, 108, 0.2);
+  }
+  &:before {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  &:after {
+    bottom: 3px;
+    left: 20px;
+    right: 20px;
+    z-index: 0;
+  }
+}
+
+/* 1. Card Course */
+.card-course {
+  max-width: 580px;
+  @extend %card-shadows;
+}
+.card-course-inner {
+  border: 1px solid #e6e8ea;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px rgba(86,88,108,0.1);
+}
+.card-course-title-holder {
+  min-height: 85px;
+}
+
+/* 2. Card Playlist */
+.card-playlist {
+  max-width: 380px;
+  @extend %card-shadows;
+}
+.card-playlist-inner {
+  border: 1px solid #e6e8ea;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px 0px rgba(86,88,108,0.1);
+}

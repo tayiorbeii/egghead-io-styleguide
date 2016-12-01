@@ -1,0 +1,19 @@
+/* MAIN */
+
+/* 1. Globals */
+@import '_globals/_normalize.css';
+@import '_globals/_tachyons.css';
+@import '_globals/_fonts.css';
+@import '_globals/_mixins.css';
+@import '_globals/_overrides.css';
+@import '_globals/_custom-helpers.css';
+
+/* 2. Shared */
+@import '_shared/_buttons.css';
+@import '_shared/_forms.css';
+/*@import '_shared/_select-box.css';*/
+
+/* 3. Components */
+@import '_components/_card-course.css';
+
+
