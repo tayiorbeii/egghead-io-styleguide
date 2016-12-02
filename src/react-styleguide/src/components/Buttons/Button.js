@@ -49,6 +49,7 @@ Button.propTypes = {
 /**
 * Button Examples for Style Guide
 */
+// TODO: Break code example markup into a separate component
 export const ButtonExamples = () => {
 	return (
 					<div className='flex flex-row justify-center flex-wrap items-center'>
@@ -72,28 +73,15 @@ export const ButtonExamples = () => {
 }
 
 /**
-* Example Code for above Button Examples
+* Example Code for above Buttons
 */
-export const ButtonExampleCode = () => {
-	return (
-		<div className='pl4 bl bw4 b--white'>
-			<pre>
-				&lt;Button&gt;Default&lt;/Button&gt;
-			</pre>
-			<pre>
-				&lt;Button type='primary' size='cta'&gt;Primary&lt;/Button&gt;
-			</pre>
-			<pre>
-				&lt;Button type='success' outline&gt;Success&lt;/Button&gt;
-			</pre>
-			<pre>
-				&lt;Button type='warning' size='small'&gt;Warning&lt;/Button&gt;
-			</pre>
-			<pre>
-				&lt;Button type='danger' size='small' outline&gt;Primary&lt;/Button&gt;
-			</pre>
-		</div>
-	)
-}
+export const ButtonExampleCode = [
+	`<Button>Default</Button>`,
+	`<Button type='primary' size='cta'>Primary</Button>`,
+	`<Button type='success' outline>Success</Button>`,
+	`<Button type='warning' size='small'>Warning</Button>`,
+	`<Button type='danger' size='small' outline>Danger</Button>`
+]
+
 
 export default Button
