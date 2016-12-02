@@ -76,7 +76,7 @@ export const ButtonExamples = () => {
 */
 export const ButtonExampleCode = () => {
 	return (
-		<blockquote className='pl4 bl bw4 b--white'>
+		<div className='pl4 bl bw4 b--white'>
 			<pre>
 				<code>
 					&lt;Button&gt;Default&lt;/Button&gt;
@@ -102,7 +102,7 @@ export const ButtonExampleCode = () => {
 					&lt;Button type='danger' size='small' outline&gt;Primary&lt;/Button&gt;
 				</code>
 			</pre>
-		</blockquote>
+		</div>
 	)
 }
 
