@@ -1,9 +1,15 @@
 import React from 'react'
 
-export const commonClasses = 'link dib f5 fw6 tracked tc br2 ttu ba'
-export const lgBtnClasses = 'h3 pa3 eh-btn-primary'
-export const ctaBtnClasses = 'lh-solid ph4 pv4 eh-cta'
-export const smBtnClasses = 'h2 lh-solid pa3 eh-btn'
+const commonClasses = 'link dib f5 fw6 tracked tc br2 ttu ba'
+const lgBtnClasses = 'h3 pa3 eh-btn-primary'
+const ctaBtnClasses = 'lh-solid ph4 pv4 eh-cta'
+const smBtnClasses = 'h2 lh-solid pa3 eh-btn'
+
+const sizedBtnClasses = {
+  large: 'h3 pa3 eh-btn-primary',
+  small: 'h2 lh-solid pa3 eh-btn',
+  cta: 'lh-solid ph4 pv4 eh-cta'
+}
 
 const solidBtnClasses = {
   success: 'b--transparent bg-green dark-navy hover-bg-dark-green',
@@ -23,7 +29,7 @@ const outlineBtnClasses = {
 
 const Button = ({href, type='default', size='large', outline=false, children='Button'}) => {
     const btnClasses = outline ? outlineBtnClasses[type] : solidBtnClasses[type]
-    const sizeClasses = size === 'large' ? lgBtnClasses : smBtnClasses
+    const sizeClasses = sizedBtnClasses[size]
 
     return (
       <a href={href} className={`${commonClasses} ${btnClasses} ${sizeClasses}`}>
@@ -35,7 +41,7 @@ const Button = ({href, type='default', size='large', outline=false, children='Bu
 Button.propTypes = {
   href: React.PropTypes.string,
   type: React.PropTypes.oneOf(['success', 'warning', 'danger', 'primary', 'default']),
-  size: React.PropTypes.oneOf(['large', 'small']),
+  size: React.PropTypes.oneOf(['large', 'small', 'cta']),
   outline: React.PropTypes.bool,
   children: React.PropTypes.string
 }

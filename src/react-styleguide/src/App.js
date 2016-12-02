@@ -6,7 +6,7 @@ class App extends Component {
     return (
       <div>
         <Button>Default</Button>
-        <Button type='primary' outline>Primary</Button>
+        <Button type='primary' size='cta'>Primary</Button>
         <Button type='danger' size='small'>Danger</Button>
         <Button type='warning' outline>Warning</Button>
         <Button type='success'>Success</Button>
@@ -15,4 +15,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
