@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button, { ButtonExamples } from './components/Buttons/Button'
+import Button, { ButtonExamples, ButtonExampleCode } from './components/Buttons/Button'
 
 class App extends Component {
   render() {
@@ -8,6 +8,7 @@ class App extends Component {
         <div className='mw8 center'>
           <h3 className='f2 mb4 mb5-ns mt5 mt6-ns pb2 bb'>Buttons</h3>
 					<ButtonExamples />
+					<ButtonExampleCode />
         </div>
       </div>
     )

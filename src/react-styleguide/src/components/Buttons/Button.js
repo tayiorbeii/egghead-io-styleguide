@@ -71,4 +71,39 @@ export const ButtonExamples = () => {
 	)
 }
 
+/**
+* Example Code for above Button Examples
+*/
+export const ButtonExampleCode = () => {
+	return (
+		<blockquote className='pl4 bl bw4 b--white'>
+			<pre>
+				<code>
+					&lt;Button&gt;Default&lt;/Button&gt;
+				</code>
+			</pre>
+			<pre>
+				<code>
+					&lt;Button type='primary' size='cta'&gt;Primary&lt;/Button&gt;
+				</code>
+			</pre>
+			<pre>
+				<code>
+					&lt;Button type='success' outline&gt;Success&lt;/Button&gt;
+				</code>
+			</pre>
+			<pre>
+				<code>
+					&lt;Button type='warning' size='small'&gt;Warning&lt;/Button&gt;
+				</code>
+			</pre>
+			<pre>
+				<code>
+					&lt;Button type='danger' size='small' outline&gt;Primary&lt;/Button&gt;
+				</code>
+			</pre>
+		</blockquote>
+	)
+}
+
 export default Button
