@@ -46,4 +46,29 @@ Button.propTypes = {
   children: React.PropTypes.string
 }
 
+/**
+* Button Examples for Style Guide
+*/
+export const ButtonExamples = () => {
+	return (
+					<div className='flex flex-row justify-center flex-wrap items-center'>
+						<div className='mb2'>
+							<Button>Default</Button>
+						</div>
+						<div className='mb2 mh2'>
+							<Button type='primary' size='cta'>Primary</Button>
+						</div>	
+						<div className='mb2 mh2'>
+							<Button type='success' outline>Success</Button>
+						</div>
+						<div className='mb2 mh2'>
+							<Button type='warning' size='small'>Warning</Button>
+						</div>
+						<div className='mb2 mh2'>						
+							<Button type='danger' size='small' outline>Danger</Button>
+						</div>
+					</div>
+	)
+}
+
 export default Button
