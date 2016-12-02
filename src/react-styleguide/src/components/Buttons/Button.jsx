@@ -21,7 +21,7 @@ const outlineBtnClasses = {
   default: 'b--white white hover-dark-navy hover-bg-white'
 }
 
-const Button = ({onClick, type='default', size='large', outline=false, children='Button'}) => {
+const Button = ({href, type='default', size='large', outline=false, children='Button'}) => {
     const btnClasses = outline ? outlineBtnClasses[type] : solidBtnClasses[type]
     const sizeClasses = size === 'large' ? lgBtnClasses : smBtnClasses
 
@@ -33,9 +33,9 @@ const Button = ({onClick, type='default', size='large', outline=false, children=
 }
 
 Button.propTypes = {
-  onClick: React.PropTypes.function,
+  href: React.PropTypes.string,
   type: React.PropTypes.oneOf(['success', 'warning', 'danger', 'primary', 'default']),
-  size: React.PropTypes.oneOf(['large', 'small'])
+  size: React.PropTypes.oneOf(['large', 'small']),
   outline: React.PropTypes.bool,
   children: React.PropTypes.string 
   
