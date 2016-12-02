@@ -8,12 +8,22 @@ class App extends Component {
         <div className='mw8 center'>
 
           <h3 className='f2 mb4 mb5-ns mt5 mt6-ns pb2 bb'>Buttons</h3>
-					<div className='flex flex-row-ns justify-around flex-wrap items-center'>
-						<Button>Default</Button>
-						<Button type='primary' size='cta'>Primary</Button>
-						<Button type='success' outline>Success</Button>
-						<Button type='warning' size='small'>Warning</Button>
-						<Button type='danger' size='small' outline>Danger</Button>
+					<div className='flex flex-row justify-between flex-wrap items-center'>
+						<div className='mb2'>
+							<Button>Default</Button>
+						</div>
+						<div className='mb2'>
+							<Button type='primary' size='cta'>Primary</Button>
+						</div>	
+						<div className='mb2'>
+							<Button type='success' outline>Success</Button>
+						</div>
+						<div className='mb2'>
+							<Button type='warning' size='small'>Warning</Button>
+						</div>
+						<div className='mb2'>						
+							<Button type='danger' size='small' outline>Danger</Button>
+						</div>
 					</div>
         </div>
       </div>
