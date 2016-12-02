@@ -49,26 +49,25 @@ Button.propTypes = {
 /**
 * Button Examples for Style Guide
 */
-// TODO: Break code example markup into a separate component
 export const ButtonExamples = () => {
 	return (
-					<div className='flex flex-row justify-center flex-wrap items-center'>
-						<div className='mb2'>
-							<Button>Default</Button>
-						</div>
-						<div className='mb2 mh2'>
-							<Button type='primary' size='cta'>Primary</Button>
-						</div>	
-						<div className='mb2 mh2'>
-							<Button type='success' outline>Success</Button>
-						</div>
-						<div className='mb2 mh2'>
-							<Button type='warning' size='small'>Warning</Button>
-						</div>
-						<div className='mb2 mh2'>						
-							<Button type='danger' size='small' outline>Danger</Button>
-						</div>
-					</div>
+		<div className='flex flex-row justify-center flex-wrap items-center'>
+			<div className='mb2'>
+				<Button>Default</Button>
+			</div>
+			<div className='mb2 mh2'>
+				<Button type='primary' size='cta'>Primary</Button>
+			</div>	
+			<div className='mb2 mh2'>
+				<Button type='success' outline>Success</Button>
+			</div>
+			<div className='mb2 mh2'>
+				<Button type='warning' size='small'>Warning</Button>
+			</div>
+			<div className='mb2 mh2'>						
+				<Button type='danger' size='small' outline>Danger</Button>
+			</div>
+		</div>
 	)
 }
 
@@ -83,5 +82,35 @@ export const ButtonExampleCode = [
 	`<Button type='danger' size='small' outline>Danger</Button>`
 ]
 
+/**
+* Prop information to be rendered into the table
+*/
+export const ButtonPropsTable = [
+	{ 
+		prop: 'href',
+		type: 'string',
+		description: 'Feeds a URL to the Button'
+	},
+	{
+		prop: 'type',
+		type: `oneOf(['success', 'warning', 'danger', 'primary', 'default'])`,
+		description: 'Styles Button accordingly'
+	},
+	{
+		prop: 'size',
+		type: `oneOf(['large', 'small', 'cta'])`,
+		description: 'Determines the size of the Button'
+	},
+	{
+		prop: 'outline',
+		type: 'boolean (false by default)',
+		description: 'Determines if Button is solid or not'
+	},
+	{
+		prop: 'children',
+		type: 'string',
+		description: 'Text to appear in the Button'
+	}
+]
 
 export default Button
