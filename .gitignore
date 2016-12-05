@@ -57,3 +57,4 @@ node_modules
 jspm_packages
 .npm
 .node_repl_history
+src/react-styleguide/src/assets
