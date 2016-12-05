@@ -3,7 +3,7 @@ import React from 'react'
 /**
  * Empty Field
 <div class="eh-text-field-wrapper">
-  <input type="text" class=" white b--gray focus-b--gray ">
+  <input type="text" class="  ">
 </div>
 
 
@@ -11,21 +11,21 @@ import React from 'react'
 * Field with Placeholder
 *
 <div class="eh-text-field-wrapper">
-  <input type="text" class=" white b--gray focus-b--gray " placeholder="Placeholder">
+  <input type="text" class="  " placeholder="Placeholder">
 </div>
 
 **
 * Disabled Field
 *
 <div class="eh-text-field-wrapper">
-  <input type="text" disabled class=" white b--gray focus-b--gray eh-text-field disabled" value="Egghead">
+  <input type="text" disabled class="  eh-text-field disabled" value="Egghead">
 </div>
 
 **
 * With Error
 *
 <div class="relative eh-text-field-wrapper">
-  <input type="text" class=" red b--red focus-b--red " value="With Error">
+  <input type="text" class="" value="With Error">
     <div class="absolute br-pill flex justify-center items-center red eh-input-status-icon">
       <i class="fa fa-times-circle"></i>
     </div>
@@ -37,7 +37,7 @@ import React from 'react'
 * Success / Tooltip
 *
 <div class="relative eh-text-field-wrapper">
-  <input type="password" class=" white b--green focus-b--green " value="********">
+  <input type="password" class="" value="********">
 
   <div class="absolute br-pill flex justify-center items-center green eh-input-status-icon">
     <i class="fa fa-check-circle"></i>
@@ -56,3 +56,21 @@ import React from 'react'
 */
 
 const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
+const standardClasses = 'white b--gray focus-b-gray'
+const errorClasses = 'red b--red focus-b--red'
+const successClasses = 'white b--green focus-b--green'
+
+const Input = ({type='text', placeholder, required=false, error=false, errMsg, disabled=false}) => {
+  let inputStyles = standardClasses
+
+  // If field is required, set style to error or success
+  if (required) {
+    inputStyles = error ? errorClasses : successClasses
+  }
+
+  return (
+    <div class='eh-text-field-wrapper'>
+      <input type={type} className={`${commonClasses}`}>
+    </div>
+  )
+}
