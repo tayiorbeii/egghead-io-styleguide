@@ -27,7 +27,7 @@ const outlineBtnClasses = {
   default: 'b--white white hover-dark-navy hover-bg-white'
 }
 
-const Button = ({href, type='default', size='large', outline=false, children='Button'}) => {
+const Button = ({href, type='default', size='large', outline=false, children}) => {
     const btnClasses = outline ? outlineBtnClasses[type] : solidBtnClasses[type]
     const sizeClasses = sizedBtnClasses[size]
 
@@ -43,74 +43,74 @@ Button.propTypes = {
   type: React.PropTypes.oneOf(['success', 'warning', 'danger', 'primary', 'default']),
   size: React.PropTypes.oneOf(['large', 'small', 'cta']),
   outline: React.PropTypes.bool,
-  children: React.PropTypes.string
+  children: React.PropTypes.string.isRequired
 }
 
 /**
 * Button Examples for Style Guide
 */
 export const ButtonExamples = () => {
-	return (
-		<div className='flex flex-row justify-center flex-wrap items-center'>
-			<div className='mb2'>
-				<Button>Default</Button>
-			</div>
-			<div className='mb2 mh2'>
-				<Button type='primary' size='cta'>Primary</Button>
-			</div>	
-			<div className='mb2 mh2'>
-				<Button type='success' outline>Success</Button>
-			</div>
-			<div className='mb2 mh2'>
-				<Button type='warning' size='small'>Warning</Button>
-			</div>
-			<div className='mb2 mh2'>						
-				<Button type='danger' size='small' outline>Danger</Button>
-			</div>
-		</div>
-	)
+  return (
+    <div className='flex flex-row justify-center flex-wrap items-center'>
+      <div className='mb2'>
+        <Button>Default</Button>
+      </div>
+      <div className='mb2 mh2'>
+        <Button type='primary' size='cta'>Primary</Button>
+      </div>
+      <div className='mb2 mh2'>
+        <Button type='success' outline>Success</Button>
+      </div>
+      <div className='mb2 mh2'>
+        <Button type='warning' size='small'>Warning</Button>
+      </div>
+      <div className='mb2 mh2'>
+        <Button type='danger' size='small' outline>Danger</Button>
+      </div>
+    </div>
+  )
 }
 
 /**
 * Example Code for above Buttons
 */
 export const ButtonExampleCode = [
-	`<Button>Default</Button>`,
-	`<Button type='primary' size='cta'>Primary</Button>`,
-	`<Button type='success' outline>Success</Button>`,
-	`<Button type='warning' size='small'>Warning</Button>`,
-	`<Button type='danger' size='small' outline>Danger</Button>`
+  `<Button>Default</Button>`,
+  `<Button type='primary' size='cta'>Primary</Button>`,
+  `<Button type='success' outline>Success</Button>`,
+  `<Button type='warning' size='small'>Warning</Button>`,
+  `<Button type='danger' size='small' outline>Danger</Button>`
 ]
 
 /**
 * Prop information to be rendered into the table
 */
 export const ButtonPropsTable = [
-	{ 
-		prop: 'href',
-		type: 'string',
-		description: 'Feeds a URL to the Button'
-	},
-	{
-		prop: 'type',
-		type: `oneOf(['success', 'warning', 'danger', 'primary', 'default'])`,
-		description: 'Styles Button accordingly'
-	},
-	{
-		prop: 'size',
-		type: `oneOf(['large', 'small', 'cta'])`,
-		description: 'Determines the size of the Button'
-	},
-	{
-		prop: 'outline',
-		type: 'boolean (false by default)',
-		description: 'Determines if Button is solid or not'
-	},
-	{
-		prop: 'children',
-		type: 'string',
-		description: 'Text to appear in the Button'
-	}
+  { 
+    prop: 'href',
+    type: 'string',
+    description: 'Feeds a URL to the Button'
+  },
+  {
+    prop: 'type',
+    type: `oneOf(['success', 'warning', 'danger', 'primary', 'default'])`,
+    description: 'Styles Button accordingly'
+  },
+  {
+    prop: 'size',
+    type: `oneOf(['large', 'small', 'cta'])`,
+    description: 'Determines the size of the Button'
+  },
+  {
+    prop: 'outline',
+    type: 'boolean (false by default)',
+    description: 'Determines if Button is solid or not'
+  },
+  {
+    prop: 'children',
+    type: 'string',
+    description: 'Text to appear in the Button'
+  }
 ]
 
 export default Button
