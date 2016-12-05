@@ -16,6 +16,12 @@ class App extends Component {
           <CodeBlock code={ButtonExampleCode} />
           <PropTable rows={ButtonPropsTable} />
         </div>
+
+        <div className='mw8 center'>
+          <Header title='Inputs' />
+          <InputExamples />
+        </div>
+
       </div>
     )
   }

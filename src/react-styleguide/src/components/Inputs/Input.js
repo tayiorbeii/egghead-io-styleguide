@@ -71,8 +71,10 @@ const Input = ({type='text', placeholder, required=false, error=false, errMsg, d
   }
 
   return (
-    <div class='eh-text-field-wrapper'>
-      <input type={type} className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`} />
+    <div className='eh-text-field-wrapper'>
+      <input type={type} placeholder={placeholder}
+        className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`}
+      />
       {errMsg
         ? <div className={errMsgClases}>{errMsg}</div>
         : null 
@@ -91,6 +93,27 @@ Input.propTypes = {
   value: React.PropTypes.string
 }
 
+/**
+* Input Examples for Style Guide 
+*/
+export const InputExamples = () => {
+  const Header = ({title}) => (
+    <span className='db f4 fw5 lh-copy mb2'>{title}</span>
+  )
+  
+  return(
+    <div className='flex flex-row justify-center flex-wrap items-center'>
+      <div className='mb2 mh2'>
+        <Header title='Empty Field' />
+        <Input />
+      </div>
 
+      <div className='mb2 mh2'>
+        <Header title='Field with Placeholder' />
+        <Input placeholder='Placeholder' />
+      </div>
+    </div>
+  )
+}
 
 export default Input
