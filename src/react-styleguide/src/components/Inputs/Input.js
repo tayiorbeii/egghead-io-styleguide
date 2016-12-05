@@ -73,7 +73,8 @@ const Input = ({type='text', placeholder, required=false, error=false,
 
   return (
     <div className='eh-text-field-wrapper'>
-      <input type={type} placeholder={placeholder} disabled={disabled} value={value}
+      <input type={type} placeholder={placeholder} required={required} error={error}
+        errMsg={errMsg} disabled={disabled} value={value}
         className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`}
       />
       {errMsg
@@ -117,6 +118,14 @@ export const InputExamples = () => {
       <div className='mb2 mh2'>
         <Header title='Disabled Field' />
         <Input value='Egghead' disabled />
+      </div>
+
+      <div className='mb2 mh2'>
+        <Header title='Error*' />
+        <Input value='Egghead' required error
+          errMsg='Password must contain at least 8 characters'
+          value='With Error'
+        />
       </div>
     </div>
   )
