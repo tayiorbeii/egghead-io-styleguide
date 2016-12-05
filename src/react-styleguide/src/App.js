@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ButtonExamples, ButtonExampleCode, ButtonPropsTable } from './components/Buttons/Button'
+import { InputExamples } from './components/Inputs/Input'
 import CodeBlock from './components/GuideElements/CodeBlock'
 import PropTable from './components/GuideElements/PropTable'
 

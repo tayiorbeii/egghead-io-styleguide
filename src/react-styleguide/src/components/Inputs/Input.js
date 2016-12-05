@@ -58,9 +58,11 @@ import React from 'react'
 const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
 const standardClasses = 'white b--gray focus-b-gray'
 const errorClasses = 'red b--red focus-b--red'
+const errMsgClases = 'db red f5 sans-serif mt3'
 const successClasses = 'white b--green focus-b--green'
+const disabledClasses = 'disabled'
 
-const Input = ({type='text', placeholder, required=false, error=false, errMsg, disabled=false}) => {
+const Input = ({type='text', placeholder, required=false, error=false, errMsg, disabled=false, value}) => {
   let inputStyles = standardClasses
 
   // If field is required, set style to error or success
@@ -70,7 +72,25 @@ const Input = ({type='text', placeholder, required=false, error=false, errMsg, d
 
   return (
     <div class='eh-text-field-wrapper'>
-      <input type={type} className={`${commonClasses}`}>
+      <input type={type} className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`} />
+      {errMsg
+        ? <div className={errMsgClases}>{errMsg}</div>
+        : null 
+      }
     </div>
   )
 }
+
+Input.propTypes = {
+  type: React.PropTypes.string,
+  placeholder: React.PropTypes.string,
+  required: React.PropTypes.bool,
+  error: React.PropTypes.bool,
+  errMsg: React.PropTypes.string,
+  disabled: React.PropTypes.bool,
+  value: React.PropTypes.string
+}
+
+
+
+export default Input
