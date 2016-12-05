@@ -1,27 +1,7 @@
 import React from 'react'
+import { SuccessIcon } from '../Icons/Icons'
 
 /**
- * Empty Field
-<div class="eh-text-field-wrapper">
-  <input type="text" class="  ">
-</div>
-
-
-**
-* Field with Placeholder
-*
-<div class="eh-text-field-wrapper">
-  <input type="text" class="  " placeholder="Placeholder">
-</div>
-
-**
-* Disabled Field
-*
-<div class="eh-text-field-wrapper">
-  <input type="text" disabled class="  eh-text-field disabled" value="Egghead">
-</div>
-
-**
 * With Error
 *
 <div class="relative eh-text-field-wrapper">
@@ -107,6 +87,8 @@ export const InputExamples = () => {
   
   return(
     <div className='flex flex-row justify-center flex-wrap items-center'>
+      <SuccessIcon />
+
       <div className={exampleLayoutClasses}>
         <Header title='Empty Field' />
         <Input />
