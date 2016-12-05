@@ -1,35 +1,19 @@
 {
-  "name": "egghead-styleguide",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "gulp build && node index.js",
-    "postinstall": "gulp build"
+  "name": "react-styleguide",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eggheadio/egghead-io-styleguide"
-  },
-  "author": "egghead.io",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eggheadio/egghead-io-styleguide/issues"
-  },
-  "homepage": "https://github.com/eggheadio/egghead-io-styleguide#readme",
   "dependencies": {
-    "autoprefixer": "^6.5.0",
-    "browser-sync": "^2.16.0",
-    "express": "^4.14.0",
-    "font-awesome": "^4.6.3",
-    "gulp": "^3.9.1",
-    "gulp-postcss": "^6.2.0",
-    "gulp-watch": "^4.3.9",
-    "precss": "^1.4.0",
+    "font-awesome": "^4.7.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
     "tachyons": "^4.5.6",
     "tachyons-background-position": "^1.0.3",
     "tachyons-background-size": "^5.0.4",
     "tachyons-base": "^1.2.6",
+    "tachyons-border-colors": "^4.2.3",
     "tachyons-border-radius": "^5.1.2",
     "tachyons-border-style": "^4.0.3",
     "tachyons-border-widths": "^3.0.3",
@@ -37,11 +21,10 @@
     "tachyons-box-shadow": "^2.0.3",
     "tachyons-box-sizing": "^3.1.9",
     "tachyons-clears": "^3.0.3",
+    "tachyons-colors": "^5.3.2",
     "tachyons-coordinates": "^4.0.3",
-    "tachyons-custom": "^4.5.4",
-    "tachyons-debug": "^1.1.9",
-    "tachyons-debug-grid": "^1.2.2",
     "tachyons-display": "^5.0.3",
+    "tachyons-flexbox": "^2.0.3",
     "tachyons-floats": "^3.0.3",
     "tachyons-font-family": "^4.3.2",
     "tachyons-font-style": "^4.0.3",
@@ -59,6 +42,8 @@
     "tachyons-outlines": "^1.0.2",
     "tachyons-overflow": "^4.0.3",
     "tachyons-position": "^6.0.3",
+    "tachyons-skins": "^4.0.2",
+    "tachyons-skins-psuedo": "^1.0.0",
     "tachyons-spacing": "^6.0.3",
     "tachyons-tables": "^1.0.6",
     "tachyons-text-align": "^3.0.3",
@@ -69,10 +54,15 @@
     "tachyons-utilities": "^1.2.8",
     "tachyons-vertical-align": "^4.0.3",
     "tachyons-visibility": "^2.0.3",
-    "tachyons-white-space": "^4.0.3",
+    "tachyons-white-space": "^4.0.4",
     "tachyons-widths": "^5.0.3",
     "tachyons-word-break": "^3.0.3",
-    "tachyons-x-ray": "^0.1.2",
     "tachyons-z-index": "^1.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
