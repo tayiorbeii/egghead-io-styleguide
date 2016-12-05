@@ -62,7 +62,8 @@ const errMsgClases = 'db red f5 sans-serif mt3'
 const successClasses = 'white b--green focus-b--green'
 const disabledClasses = 'disabled'
 
-const Input = ({type='text', placeholder, required=false, error=false, errMsg, disabled=false, value}) => {
+const Input = ({type='text', placeholder, required=false, error=false,
+                errMsg, disabled=false, value}) => {
   let inputStyles = standardClasses
 
   // If field is required, set style to error or success
@@ -72,7 +73,7 @@ const Input = ({type='text', placeholder, required=false, error=false, errMsg, d
 
   return (
     <div className='eh-text-field-wrapper'>
-      <input type={type} placeholder={placeholder}
+      <input type={type} placeholder={placeholder} disabled={disabled} value={value}
         className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`}
       />
       {errMsg
@@ -111,6 +112,11 @@ export const InputExamples = () => {
       <div className='mb2 mh2'>
         <Header title='Field with Placeholder' />
         <Input placeholder='Placeholder' />
+      </div>
+
+      <div className='mb2 mh2'>
+        <Header title='Disabled Field' />
+        <Input value='Egghead' disabled />
       </div>
     </div>
   )

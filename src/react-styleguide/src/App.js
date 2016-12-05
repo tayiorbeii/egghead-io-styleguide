@@ -3,6 +3,7 @@ import { ButtonExamples, ButtonExampleCode, ButtonPropsTable } from './component
 import { InputExamples } from './components/Inputs/Input'
 import CodeBlock from './components/GuideElements/CodeBlock'
 import PropTable from './components/GuideElements/PropTable'
+import './assets/stylesheets/build.css'
 
 class App extends Component {
   render() {
