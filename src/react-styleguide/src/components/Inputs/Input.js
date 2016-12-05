@@ -102,25 +102,27 @@ export const InputExamples = () => {
   const Header = ({title}) => (
     <span className='db f4 fw5 lh-copy mb2'>{title}</span>
   )
+
+  const exampleLayoutClasses = 'w-100 w-50-m w-33-l pr3-m pl4-l mt4'
   
   return(
     <div className='flex flex-row justify-center flex-wrap items-center'>
-      <div className='mb2 mh2'>
+      <div className={exampleLayoutClasses}>
         <Header title='Empty Field' />
         <Input />
       </div>
 
-      <div className='mb2 mh2'>
+      <div className={exampleLayoutClasses}>
         <Header title='Field with Placeholder' />
         <Input placeholder='Placeholder' />
       </div>
 
-      <div className='mb2 mh2'>
+      <div className={exampleLayoutClasses}>
         <Header title='Disabled Field' />
         <Input value='Egghead' disabled />
       </div>
 
-      <div className='mb2 mh2'>
+      <div className={exampleLayoutClasses}>
         <Header title='Error*' />
         <Input value='Egghead' required error
           errMsg='Password must contain at least 8 characters'
