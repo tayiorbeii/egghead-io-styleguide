@@ -44,7 +44,7 @@ const successClasses = 'white b--green focus-b--green'
 const disabledClasses = 'disabled'
 
 const Input = ({type='text', placeholder, required=false, error=false,
-                errMsg, disabled=false, value}) => {
+                errMsg, disabled=false, value, icon}) => {
   let inputStyles = standardClasses
 
   // If field is required, set style to error or success
@@ -53,11 +53,12 @@ const Input = ({type='text', placeholder, required=false, error=false,
   }
 
   return (
-    <div className='eh-text-field-wrapper'>
+    <div className='relative eh-text-field-wrapper'>
       <input type={type} placeholder={placeholder} required={required} error={error}
         errMsg={errMsg} disabled={disabled} value={value}
         className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`}
       />
+      {icon}
       {errMsg
         ? <div className={errMsgClases}>{errMsg}</div>
         : null 
@@ -107,7 +108,8 @@ export const InputExamples = () => {
       <div className={exampleLayoutClasses}>
         <Header title='Error*' />
         <Input value='Egghead' required error
-          errMsg='Password must contain at least 8 characters'
+          errMsg='Password must contain at least 8 characters.'
+          icon={<XIcon />}
           value='With Error'
         />
       </div>
