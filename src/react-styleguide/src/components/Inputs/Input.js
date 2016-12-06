@@ -8,6 +8,7 @@ const errorClasses = 'red b--red focus-b--red'
 const errorMsgClases = 'db red f5 sans-serif mt3'
 const successClasses = 'white b--green focus-b--green'
 const disabledClasses = 'disabled'
+const inputTypes = ['text', 'password']
 
 const Input = ({type='text', placeholder, required=false, error=false,
                 errorMsg, disabled=false, value, icon}) => {
@@ -33,7 +34,7 @@ const Input = ({type='text', placeholder, required=false, error=false,
 }
 
 Input.propTypes = {
-  type: React.PropTypes.string,
+  type: React.PropTypes.oneOf(inputTypes),
   placeholder: React.PropTypes.string,
   required: React.PropTypes.bool,
   error: React.PropTypes.bool,
@@ -45,6 +46,46 @@ Input.propTypes = {
 /**
 * Input Examples for Style Guide 
 */
+const inputExampleList = [
+  {
+    title: 'Empty Field'
+  },
+  {
+    title: 'Field with Placeholder',
+    props: {
+      placeholder: 'Placeholder'
+    }
+  },
+  {
+    title: 'Disabled Field',
+    props: {
+      value: 'Egghead',
+      disabled: true
+    }
+  },
+  {
+    title: 'Error*',
+    props: {
+      value: 'Egghead',
+      required: true,
+      error: true,
+      value: 'With Error',
+      icon: 'cancel',
+      errorMsg: 'Password must contain at least 8 characters.'
+    }
+  },
+  {
+    title: 'Success*',
+    props: {
+      value: 'Password',
+      required: true,
+      type: 'password',
+      icon: 'success'
+    },
+    supportingComponent: PasswordTooltip
+  }
+]
+
 export const InputExamples = () => {
   const Header = ({title}) => (
     <span className='db f4 fw5 lh-copy mb2'>{title}</span>
