@@ -6,12 +6,12 @@ import { PasswordTooltip } from '../Tooltips/Tooltips'
 const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
 const standardClasses = 'white b--gray focus-b-gray'
 const errorClasses = 'red b--red focus-b--red'
-const errMsgClases = 'db red f5 sans-serif mt3'
+const errorMsgClases = 'db red f5 sans-serif mt3'
 const successClasses = 'white b--green focus-b--green'
 const disabledClasses = 'disabled'
 
 const Input = ({type='text', placeholder, required=false, error=false,
-                errMsg, disabled=false, value, icon}) => {
+                errorMsg, disabled=false, value, icon}) => {
   let inputStyles = standardClasses
 
   // If field is required, set style to error or success
@@ -25,8 +25,8 @@ const Input = ({type='text', placeholder, required=false, error=false,
         className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`}
       />
       {icon}
-      {errMsg
-        ? <div className={errMsgClases}>{errMsg}</div>
+      {errorMsg
+        ? <div className={errorMsgClases}>{errorMsg}</div>
         : null 
       }
     </div>
@@ -38,7 +38,7 @@ Input.propTypes = {
   placeholder: React.PropTypes.string,
   required: React.PropTypes.bool,
   error: React.PropTypes.bool,
-  errMsg: React.PropTypes.string,
+  errorMsg: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   defaultValue: React.PropTypes.string
 }
@@ -74,7 +74,7 @@ export const InputExamples = () => {
       <div className={exampleLayoutClasses}>
         <Header title='Error*' />
         <Input value='Egghead' required error
-          errMsg='Password must contain at least 8 characters.'
+          errorMsg='Password must contain at least 8 characters.'
           icon={<XIcon />}
           value='With Error'
         />
@@ -108,7 +108,7 @@ export const InputExampleCode = [
   `<Input placeholder='Placeholder' />`, 
   `<Input value='Egghead' disabled />`,
   `<Input value='Egghead' required error
-  errMsg='Password must contain at least 8 characters.'
+  errorMsg='Password must contain at least 8 characters.'
   icon={<XIcon />}
   value='With Error'
 />`,
@@ -144,7 +144,7 @@ export const InputPropsTable = [
     description: 'Style input as "Error"'
   },
   { 
-    prop: 'errMsg',
+    prop: 'errorMsg',
     type: 'string',
     description: 'Error message text to display'
   },
