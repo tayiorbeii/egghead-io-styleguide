@@ -210,6 +210,11 @@ export const InputPropsTable = [
     type: 'string',
     description: 'Optional default value for the input'
   },
+  { 
+    prop: 'icon',
+    type: 'Icon component',
+    description: 'Optional icon component to add to input'
+  }
 ]
 
 export default Input
