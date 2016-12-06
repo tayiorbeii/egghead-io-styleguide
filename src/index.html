@@ -256,28 +256,38 @@
     <section class="mb6">
       <h2 class="f3 fw6 lh-copy ttu white mt0 mb1">4. Switchers</h2>
 
-      <div class="mb5">
-        <div class="flex items-center w-100 pr3 mt4">
-          <span class="f4 mr4">Frequency</span>
+      <div class="mb5 flex">
+        <div class="flex items-center w-50 pr3 mt4">
+          <span class="f4 mr4 flex-shrink-0">Frequency</span>
           <div class="relative flex f5 br-pill ba b--light-navy eh-switcher switched">
-            <div class="w-50 flex justify-center items-center pl3 pr2 relative z-2 pointer">Monthly</div>
-            <div class="w-50 flex justify-center items-center pr3 pl2 relative z-2 pointer">Weekly</div>
+            <div class="w-50 flex justify-center items-center ph2 relative z-2 pointer">Monthly</div>
+            <div class="w-50 flex justify-center items-center ph2 relative z-2 pointer">Weekly</div>
           </div>
         </div>
-        <div class="flex items-center w-100 pr3 mt4">
-          <span class="f4 mr4">Auto Refresh</span>
-        </div>
-        <div class="flex items-center w-100 pr3 mt4">
-          <span class="f4 mr4">Autoplay Next</span>
+        <div class="flex items-center w-50 pr3 mt4 fw6">
+          <span class="f4 mr4 flex-shrink-0">Auto Refresh</span>
+          <div class="relative pointer flex items-center br-pill pv1 ph2 ba b--light-navy red eh-switcher-on-off switched">
+            <div class="w-50 tl ttu">on</div>
+            <div class="w-50 tr  ttu">off</div>
+          </div>
         </div>
       </div>
 
-      <!-- Script below is just for demo -->
+      <!-- Scripts below are just for demo -->
       <script>
         var switchElems = document.getElementsByClassName('eh-switcher');
         for (var i = 0; i < switchElems.length; i++) {
           switchElems[i].addEventListener('click', function () {
             this.closest('.eh-switcher').classList.toggle('switched');
+          })
+        }
+      </script>
+
+      <script>
+        var switchElems = document.getElementsByClassName('eh-switcher-on-off');
+        for (var i = 0; i < switchElems.length; i++) {
+          switchElems[i].addEventListener('click', function () {
+            this.closest('.eh-switcher-on-off').classList.toggle('on');
           })
         }
       </script>
