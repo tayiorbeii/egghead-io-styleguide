@@ -70,7 +70,7 @@ const inputExampleList = [
       required: true,
       error: true,
       value: 'With Error',
-      icon: 'cancel',
+      icon: (<Icon type='cancel' />),
       errorMsg: 'Password must contain at least 8 characters.'
     }
   },
@@ -80,9 +80,9 @@ const inputExampleList = [
       value: 'Password',
       required: true,
       type: 'password',
-      icon: 'success'
+      icon: (<Icon type='success' />)
     },
-    supportingComponent: PasswordTooltip
+    supportingComponent: (<PasswordTooltip />)
   }
 ]
 
@@ -93,48 +93,25 @@ export const InputExamples = () => {
 
   const exampleLayoutClasses = 'w-100 w-50-m w-33-l pr3-m pl4-l mt2'
   
-  return(
+  const InputBlock = ({title, props, supportingComponent}) => {
+    return (
+      <div className={exampleLayoutClasses}>
+        <Header title={title} />
+        <Input {...props} />
+        {supportingComponent}
+      </div>
+    )
+  }
+
+  return (
     <div className='flex flex-row justify-center flex-wrap items-center'>
+      {inputExampleList.map((input, i) => <InputBlock key={i} {...input} />)}
 
-      <div className={exampleLayoutClasses}>
-        <Header title='Empty Field' />
-        <Input />
-      </div>
-
-      <div className={exampleLayoutClasses}>
-        <Header title='Field with Placeholder' />
-        <Input placeholder='Placeholder' />
-      </div>
-
-      <div className={exampleLayoutClasses}>
-        <Header title='Disabled Field' />
-        <Input value='Egghead' disabled />
-      </div>
-
-      <div className={exampleLayoutClasses}>
-        <Header title='Error*' />
-        <Input value='Egghead' required error
-          errorMsg='Password must contain at least 8 characters.'
-          icon={<Icon type='cancel' />}
-          value='With Error'
-        />
-      </div>
-
-      <div className={exampleLayoutClasses}>
-        <Header title='Success*' />
-        <Input value='Egghead' required
-          icon={<Icon type='success' />}
-          value='password'
-          type='password'
-        />
-        <PasswordTooltip />
-      </div>
-
+      {/* Icon Examples */}
       <div className={exampleLayoutClasses}>
         <Header title='Icons' />
         <IconExamples />
-      </div> 
-
+      </div>
     </div>
   )
 }
