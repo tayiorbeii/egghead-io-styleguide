@@ -1,6 +1,6 @@
 import React from 'react'
 import { SuccessIcon, PlusIcon, MinusIcon,
-         XIcon, BangIcon, QuestionIcon } from '../Icons/Icons'
+         XIcon, BangIcon, QuestionIcon, IconExamples } from '../Icons/Icons'
 
 const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
 const standardClasses = 'white b--gray focus-b-gray'
@@ -103,7 +103,7 @@ export const InputExamples = () => {
     <span className='db f4 fw5 lh-copy mb2'>{title}</span>
   )
 
-  const exampleLayoutClasses = 'w-100 w-50-m w-33-l pr3-m pl4-l mt4'
+  const exampleLayoutClasses = 'w-100 w-50-m w-33-l pr3-m pl4-l mt2'
   
   return(
     <div className='flex flex-row justify-center flex-wrap items-center'>
@@ -141,6 +141,12 @@ export const InputExamples = () => {
         />
         <PasswordTooltip />
       </div>
+
+      <div className={exampleLayoutClasses}>
+        <Header title='Icons' />
+        <IconExamples />
+      </div> 
+
     </div>
   )
 }
