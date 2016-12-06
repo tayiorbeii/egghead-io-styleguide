@@ -108,17 +108,16 @@ export const InputExampleCode = [
   `<Input value='Egghead' disabled />`,
   `<Input value='Egghead' required error
   errorMsg='Password must contain at least 8 characters.'
-  icon={<XIcon />}
+  icon={<Icon type='cancel' />}
   value='With Error'
 />`,
  `<Input value='Egghead' required
-  icon={<SuccessIcon />}
+  icon={<Icon type='success' />}
   value='password'
   type='password'
 />`,
  `<PasswordTooltip />`,
-`<SuccessIcon /> <PlusIcon /> <MinusIcon />
-<XIcon /> <BangIcon /> <QuestionIcon />`
+`<Icon type='success | cancel | add | warning | remove | question' />`
 ]
 
 export const InputPropsTable = [
