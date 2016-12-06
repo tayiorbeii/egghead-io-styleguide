@@ -151,4 +151,25 @@ export const InputExamples = () => {
   )
 }
 
+export const InputExampleCode = [
+// Ugly formatting, but looks right when rendered
+  `<Input />`,
+  `<Input placeholder='Placeholder' />`, 
+  `<Input value='Egghead' disabled />`,
+  `<Input value='Egghead' required error
+  errMsg='Password must contain at least 8 characters.'
+  icon={<XIcon />}
+  value='With Error'
+/>`,
+ `<Input value='Egghead' required
+  icon={<SuccessIcon />}
+  value='password'
+  type='password'
+/>`,
+ `<PasswordTooltip />`,
+`<SuccessIcon /> <PlusIcon /> <MinusIcon />
+<XIcon /> <BangIcon /> <QuestionIcon>`
+
+]
+
 export default Input
