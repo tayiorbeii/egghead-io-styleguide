@@ -151,8 +151,11 @@ export const InputExamples = () => {
   )
 }
 
+/**
+ * Example Code for above Input Examples
+ * (Ugly formatting, but looks right when rendered)
+ */
 export const InputExampleCode = [
-// Ugly formatting, but looks right when rendered
   `<Input />`,
   `<Input placeholder='Placeholder' />`, 
   `<Input value='Egghead' disabled />`,
@@ -168,8 +171,45 @@ export const InputExampleCode = [
 />`,
  `<PasswordTooltip />`,
 `<SuccessIcon /> <PlusIcon /> <MinusIcon />
-<XIcon /> <BangIcon /> <QuestionIcon>`
+<XIcon /> <BangIcon /> <QuestionIcon />`
+]
 
+export const InputPropsTable = [
+  { 
+    prop: 'type',
+    type: 'string',
+    description: 'Input type, e.g. text or password'
+  },
+  { 
+    prop: 'placeholder',
+    type: 'string',
+    description: 'Placeholder in input field'
+  },
+  { 
+    prop: 'required',
+    type: 'boolean (false by default)',
+    description: 'If required, will be styled as "Error" or "Success"'
+  },
+  { 
+    prop: 'error',
+    type: 'boolean (false by default)',
+    description: 'Style input as "Error"'
+  },
+  { 
+    prop: 'errMsg',
+    type: 'string',
+    description: 'Error message text to display'
+  },
+  { 
+    prop: 'disabled',
+    type: 'boolean (false by default)',
+    description: 'If true, disables input'
+  },
+  { 
+    prop: 'defaultValue',
+    type: 'string',
+    description: 'Optional default value for the input'
+  },
 ]
 
 export default Input

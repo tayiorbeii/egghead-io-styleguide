@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { ButtonExamples, ButtonExampleCode, ButtonPropsTable } from './components/Buttons/Button'
-import { InputExamples, InputExampleCode } from './components/Inputs/Input'
+import { InputExamples, InputExampleCode, InputPropsTable } from './components/Inputs/Input'
 import CodeBlock from './components/GuideElements/CodeBlock'
 import PropTable from './components/GuideElements/PropTable'
 import './assets/stylesheets/build.css'
@@ -22,6 +22,7 @@ class App extends Component {
           <Header title='Inputs' />
           <InputExamples />
           <CodeBlock code={InputExampleCode} />
+          <PropTable rows={InputPropsTable} />
         </div>
 
       </div>
