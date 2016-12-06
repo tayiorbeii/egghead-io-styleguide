@@ -2,18 +2,7 @@ import React from 'react'
 import { SuccessIcon, PlusIcon, MinusIcon,
          XIcon, BangIcon, QuestionIcon } from '../Icons/Icons'
 
-/**
-* With Error
-*
-<div class="relative eh-text-field-wrapper">
-  <input type="text" class="" value="With Error">
-    <div class="absolute br-pill flex justify-center items-center red eh-input-status-icon">
-      <i class="fa fa-times-circle"></i>
-    </div>
-
-    <div class="db red f5 sans-serif mt3">Password must contain at least 8 characters.</div>
-</div>
-
+/*
 **
 * Success / Tooltip
 *
@@ -54,8 +43,7 @@ const Input = ({type='text', placeholder, required=false, error=false,
 
   return (
     <div className='relative eh-text-field-wrapper'>
-      <input type={type} placeholder={placeholder} required={required} error={error}
-        errMsg={errMsg} disabled={disabled} value={value}
+      <input type={type} placeholder={placeholder} required={required} disabled={disabled} defaultValue={value}
         className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`}
       />
       {icon}
@@ -74,7 +62,7 @@ Input.propTypes = {
   error: React.PropTypes.bool,
   errMsg: React.PropTypes.string,
   disabled: React.PropTypes.bool,
-  value: React.PropTypes.string
+  defaultValue: React.PropTypes.string
 }
 
 /**
@@ -111,6 +99,15 @@ export const InputExamples = () => {
           errMsg='Password must contain at least 8 characters.'
           icon={<XIcon />}
           value='With Error'
+        />
+      </div>
+
+      <div className={exampleLayoutClasses}>
+        <Header title='Success*' />
+        <Input value='Egghead' required
+          icon={<SuccessIcon />}
+          value='password'
+          type='password'
         />
       </div>
     </div>
