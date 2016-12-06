@@ -1,6 +1,5 @@
 import React from 'react'
-import { SuccessIcon, PlusIcon, MinusIcon,
-         XIcon, BangIcon, QuestionIcon, IconExamples } from '../Icons/Icons'
+import Icon, { IconExamples } from '../Icons/Icons'
 import { PasswordTooltip } from '../Tooltips/Tooltips'
 
 const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
@@ -75,7 +74,7 @@ export const InputExamples = () => {
         <Header title='Error*' />
         <Input value='Egghead' required error
           errorMsg='Password must contain at least 8 characters.'
-          icon={<XIcon />}
+          icon={<Icon type='cancel' />}
           value='With Error'
         />
       </div>
@@ -83,7 +82,7 @@ export const InputExamples = () => {
       <div className={exampleLayoutClasses}>
         <Header title='Success*' />
         <Input value='Egghead' required
-          icon={<SuccessIcon />}
+          icon={<Icon type='success' />}
           value='password'
           type='password'
         />
