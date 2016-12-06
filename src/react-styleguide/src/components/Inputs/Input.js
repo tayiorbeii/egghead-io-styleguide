@@ -1,5 +1,6 @@
 import React from 'react'
-import { SuccessIcon } from '../Icons/Icons'
+import { SuccessIcon, PlusIcon, MinusIcon,
+         XIcon, BangIcon, QuestionIcon } from '../Icons/Icons'
 
 /**
 * With Error
@@ -87,7 +88,6 @@ export const InputExamples = () => {
   
   return(
     <div className='flex flex-row justify-center flex-wrap items-center'>
-      <SuccessIcon />
 
       <div className={exampleLayoutClasses}>
         <Header title='Empty Field' />
