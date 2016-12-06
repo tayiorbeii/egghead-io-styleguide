@@ -2,29 +2,6 @@ import React from 'react'
 import { SuccessIcon, PlusIcon, MinusIcon,
          XIcon, BangIcon, QuestionIcon } from '../Icons/Icons'
 
-/*
-**
-* Success / Tooltip
-*
-<div class="relative eh-text-field-wrapper">
-  <input type="password" class="" value="********">
-
-  <div class="absolute br-pill flex justify-center items-center green eh-input-status-icon">
-    <i class="fa fa-check-circle"></i>
-  </div>
-
-  <!-- PASSWORD STRENGTH TOOLTIP -->
-  <div class="absolute db br2 w-100 mt4 pa3 sans-serif navy bg-white eh-input-tooltip">
-    <h5 class="f5 normal ma0 mb3">Password Strength: <strong class="fw-5">Good</strong></h5>
-    <div class="w-100 mb3 br-pill overflow-hidden bg-light-gray">
-      <div class="bg-blue pa1 w-50"></div>
-    </div>
-    <div class="f6 lh-copy">Use at least 8 characters. Don’t use a password from another site, or somethings too obvious like your pet’s name. <a href="#" class="orange mh1">Why?</a></div>
-    </div>
-</div>
-
-*/
-
 const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
 const standardClasses = 'white b--gray focus-b-gray'
 const errorClasses = 'red b--red focus-b--red'
@@ -63,6 +40,59 @@ Input.propTypes = {
   errMsg: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   defaultValue: React.PropTypes.string
+}
+
+/**
+ * Reusable Tooltip Component
+ */
+export const Tooltip = ({children}) => {
+  const ttClasses = 'relative db br2 w-100 mt4 pa3 sans-serif navy bg-white eh-input-tooltip'  
+  return (
+    <div className={ttClasses}>
+      {children}
+    </div>
+  )
+}
+Tooltip.propTypes = {
+  children: React.PropTypes.node.isRequired
+}
+
+const PassStrength = ({strength}) => {
+  // Strength Values (tachyon widths): 10, 20, 25, 30, 33, 34, 40, 50, 60, 70, 75, 80, 90, 100
+  // TODO: Map strength value to a word (e.g. "Weak", "Good", "Strong")
+  // TODO: Map strength value to appropriate width
+  const width = `w-${strength}`
+  const sWord = 'Good'
+
+  return (
+    <div>
+      <h5 className='f5 normal ma0 mb3'>
+        Password Strength: <strong className='fw-5'>{sWord}</strong>
+      </h5>  
+      <div className='w-100 mb3 br-pill overflow-hidden bg-light-gray'>
+        <div className={`bg-blue pa1 ${width}`}></div>
+      </div>
+    </div>
+  )
+}
+PassStrength.propTypes = {
+  strength: React.PropTypes.number.isRequired
+}
+
+export const PasswordTooltip = () => {
+    const passMsg = (
+      <div className='f6 lh-copy'>
+        Use at least 8 characters. Don’t use a password from another site, or something too obvious
+        like your pet’s name. <a href="#" className='orange mh1'>Why?</a>
+      </div>
+    )
+
+  return (
+    <Tooltip>
+      <PassStrength strength={60} />
+      {passMsg}
+    </Tooltip>
+  )
 }
 
 /**
@@ -109,6 +139,7 @@ export const InputExamples = () => {
           value='password'
           type='password'
         />
+        <PasswordTooltip />
       </div>
     </div>
   )
