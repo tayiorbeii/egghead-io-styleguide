@@ -49,9 +49,7 @@ Button.propTypes = {
   href: React.PropTypes.string,
   type: React.PropTypes.oneOf(types),
   size: React.PropTypes.oneOf(sizes),
-  options: React.PropTypes.arrayOf(
-             React.PropTypes.oneOf(options)
-           ),
+  options: React.PropTypes.arrayOf(React.PropTypes.oneOf(options)),
   children: React.PropTypes.string.isRequired
 }
 
