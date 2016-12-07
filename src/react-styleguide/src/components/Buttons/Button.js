@@ -7,7 +7,6 @@ const smBtnClasses = 'h2 lh-solid pa3 eh-btn'
 
 const sizes = ['large', 'small', 'cta']
 const types = ['success', 'warning', 'danger', 'primary', 'default']
-const options = ['outline']
 
 const sizedBtnClasses = {
   large: 'h3 pa3 eh-btn-primary',
@@ -31,10 +30,7 @@ const outlineBtnClasses = {
   default: 'b--white white hover-dark-navy hover-bg-white'
 }
 
-const Button = ({href, type='default', size='large', options=[], children}) => {
-    
-    const outline = options.includes('outline')
-
+const Button = ({href, type='default', size='large', outline=false, children}) => {
     const btnClasses = outline ? outlineBtnClasses[type] : solidBtnClasses[type]
     const sizeClasses = sizedBtnClasses[size]
 
@@ -49,7 +45,7 @@ Button.propTypes = {
   href: React.PropTypes.string,
   type: React.PropTypes.oneOf(types),
   size: React.PropTypes.oneOf(sizes),
-  options: React.PropTypes.arrayOf(React.PropTypes.oneOf(options)),
+  outline: React.PropTypes.bool,
   children: React.PropTypes.string.isRequired
 }
 
@@ -64,7 +60,7 @@ const buttonExampleList = [
   },
   {
     type: 'success',
-    options: ['outline'],
+    outline: true,
     children: 'Success'
   },
   {
@@ -75,7 +71,7 @@ const buttonExampleList = [
   {
     type: 'danger',
     size: 'small',
-    options: ['outline'],
+    outline: true,
     children: 'Danger'
   }
 ]
@@ -89,7 +85,7 @@ export const ButtonExamples = () => {
       {buttonExampleList.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
-            <Button options={btn.options} {...btn}>
+            <Button {...btn}>
               {btn.children}
             </Button>
           </div>
