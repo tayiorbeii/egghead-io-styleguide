@@ -5,7 +5,7 @@ import { PasswordTooltip } from '../Tooltips/Tooltips'
 const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
 const standardClasses = 'white b--gray focus-b-gray'
 const errorClasses = 'red b--red focus-b--red'
-const errorMsgClases = 'db red f5 sans-serif mt3'
+const errorMsgClasses = 'db red f5 sans-serif mt3'
 const successClasses = 'white b--green focus-b--green'
 const disabledClasses = 'disabled'
 const inputTypes = ['text', 'password']
@@ -26,7 +26,7 @@ const Input = ({type='text', placeholder, required=false, error=false,
       />
       {icon}
       {errorMsg
-        ? <div className={errorMsgClases}>{errorMsg}</div>
+        ? <div className={errorMsgClasses}>{errorMsg}</div>
         : null 
       }
     </div>
