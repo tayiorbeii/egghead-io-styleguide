@@ -5,6 +5,9 @@ const lgBtnClasses = 'h3 pa3 eh-btn-primary'
 const ctaBtnClasses = 'lh-solid ph4 pv4 eh-cta'
 const smBtnClasses = 'h2 lh-solid pa3 eh-btn'
 
+const sizes = ['large', 'small', 'cta']
+const types = ['success', 'warning', 'danger', 'primary', 'default']
+
 const sizedBtnClasses = {
   large: 'h3 pa3 eh-btn-primary',
   small: 'h2 lh-solid pa3 eh-btn',
@@ -40,11 +43,38 @@ const Button = ({href, type='default', size='large', outline=false, children}) =
 
 Button.propTypes = {
   href: React.PropTypes.string,
-  type: React.PropTypes.oneOf(['success', 'warning', 'danger', 'primary', 'default']),
-  size: React.PropTypes.oneOf(['large', 'small', 'cta']),
+  type: React.PropTypes.oneOf(types),
+  size: React.PropTypes.oneOf(sizes),
   outline: React.PropTypes.bool,
   children: React.PropTypes.string.isRequired
 }
+
+const buttonExampleList = [
+  {
+    children: 'Default'
+  },
+  {
+    type: 'primary',
+    size: 'cta',
+    children: 'Primary'
+  },
+  {
+    type: 'success',
+    outline: true,
+    children: 'Success'
+  },
+  {
+    type: 'warning',
+    size: 'small',
+    children: 'Warning'
+  },
+  {
+    type: 'danger',
+    size: 'small',
+    outline: true,
+    children: 'Danger'
+  }
+]
 
 /**
 * Button Examples for Style Guide
@@ -52,21 +82,15 @@ Button.propTypes = {
 export const ButtonExamples = () => {
   return (
     <div className='flex flex-row justify-center flex-wrap items-center'>
-      <div className='mb2'>
-        <Button>Default</Button>
-      </div>
-      <div className='mb2 mh2'>
-        <Button type='primary' size='cta'>Primary</Button>
-      </div>
-      <div className='mb2 mh2'>
-        <Button type='success' outline>Success</Button>
-      </div>
-      <div className='mb2 mh2'>
-        <Button type='warning' size='small'>Warning</Button>
-      </div>
-      <div className='mb2 mh2'>
-        <Button type='danger' size='small' outline>Danger</Button>
-      </div>
+      {buttonExampleList.map((btn, i) => {
+        return (
+          <div className='mb2 mh2' key={i}>
+            <Button {...btn}>
+              {btn.children}
+            </Button>
+          </div>
+        )
+      })}
     </div>
   )
 }
@@ -93,12 +117,12 @@ export const ButtonPropsTable = [
   },
   {
     prop: 'type',
-    type: `oneOf(['success', 'warning', 'danger', 'primary', 'default'])`,
+    type: `oneOf(${types})`,
     description: 'Styles Button accordingly'
   },
   {
     prop: 'size',
-    type: `oneOf(['large', 'small', 'cta'])`,
+    type: `oneOf(${sizes})`,
     description: 'Determines the size of the Button'
   },
   {
