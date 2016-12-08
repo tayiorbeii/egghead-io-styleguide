@@ -80,25 +80,32 @@ const checkboxExampleList = [
  * Checkbox Examples for Style Guide
  */
 export const CheckboxExamples = () => {
-  <div className='flex flex-row justify-center flex-wrap items-center'>
-    {checkboxExampleList.map((checkbox, i) => {
-      return (
-        <div className='mb2 mh2' key={i}>
-          <Checkbox {...checkbox} />
-        </div>
-      )
-    })}
-  </div>
+  return (
+    <div className='flex flex-row justify-center flex-wrap items-center'>
+      {checkboxExampleList.map((checkbox, i) => {
+        return (
+          <div className='mb2 mh2' key={i}>
+            <Checkbox {...checkbox} />
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 /**
+ * Example Code for above Checkboxes
+ */
+export const CheckboxExampleCode = [
+  `<Checkbox label='Checkbox' />`,
+  `<Checkbox label='Checkbox' checked />`,
+  `<Checkbox label='Checkbox' disabled />`,
+  `<Checkbox label='Checkbox' checked disabled />`,
+  
+]
+
+/**
 * Prop information to be rendered into the table
-    name: React.PropTypes.string,
-    label: React.PropTypes.string,
-    checked: React.PropTypes.bool,
-    disabled: React.PropTypes.bool,
-    onChange: React.PropTypes.func, // Called when user changes checked state
-    onClick: React.PropTypes.func // Called when checkbox is clicked
 */
 export const CheckboxPropsTable = [
   {
