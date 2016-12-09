@@ -13,7 +13,9 @@ class Checkbox extends Component {
     checked: React.PropTypes.bool,
     disabled: React.PropTypes.bool,
     onChange: React.PropTypes.func, // Called when user changes checked state
-    onClick: React.PropTypes.func // Called when checkbox is clicked
+    onClick: React.PropTypes.func, // Called when checkbox is clicked
+    radio: React.PropTypes.bool, // Should be rendered as a radio (exclusive option)
+    toggle: React.PropTypes.bool // Should be rendered as a toggle (on or off)
   }
 
   constructor(props) {
@@ -29,6 +31,13 @@ class Checkbox extends Component {
     if ('checked' in nextProps) {
       this.setState({ checked: nextProps.checked })
     }
+  }
+
+  canToggle = () => {
+    const { disabled, radio } = this.props
+    const { checked } = this.state
+
+    return !disabled && !(radio && checked)
   }
 
   handleChange = (e) => {
@@ -141,5 +150,4 @@ export const CheckboxPropsTable = [
 ]
 
 export default Checkbox
-
 

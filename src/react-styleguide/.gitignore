@@ -14,3 +14,4 @@ build
 .env
 npm-debug.log
 src/assets/* # Clone from vanilla html version
+.eslint.js
