@@ -1,10 +1,41 @@
 import React, { Component } from 'react'
 
-const labelClasses = 'inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-checkbox'
+const commonClasses = 'inline-flex v-top items-center lh-title f4 overflow-hidden'
 const inputClasses = 'o-0 absolute left--1'
-const boxClasses = 'mr3 br2 ba b--white hover-b--green eh-checkbox-icon'
-const checkedClasses = ''
 const disabledClasses = 'disabled'
+
+const checkboxClasses = 'pointer eh-checkbox'
+const boxIconClasses = 'mr3 br2 ba b--white hover-b--green eh-checkbox-icon'
+
+const radioClasses = 'eh-radio'
+const radioIconClasses = 'mr3 br-pill ba b--white hover-b--green eh-radio-icon'
+
+const styleMap = {
+  checkbox: {
+    labelClasses: checkboxClasses,
+    iconClasses: boxIconClasses
+  },
+  radio: {
+    labelClasses: radioClasses,
+    iconClasses: radioIconClasses
+  }
+}
+
+/**
+ * Unchecked Radio
+ *<label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio">
+              <input type="radio" class="o-0 absolute left--1" name="radio">
+              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
+            </label>
+ *
+ * Checked Radio
+ * <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio ml5">
+              <input type="radio" class="o-0 absolute left--1" name="radio" checked="">
+              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
+            </label>
+ *
+ */
+
 
 class Checkbox extends Component {
   static propTypes = {
@@ -60,17 +91,28 @@ class Checkbox extends Component {
   }
 
   render() {
-    const { name, label, disabled, onChange, onClick } = this.props
+    const { name, label, disabled, onChange, onClick, radio=false, toggle=false } = this.props
     const { checked } = this.state
-  
+
+    let type = 'checkbox'
+    if (radio && !toggle) {
+      type = 'radio'
+    }
+    if (toggle && !radio) {
+      type = 'toggle'
+    }
+
+    const labelClasses = styleMap[type]['labelClasses']
+    const iconClasses = styleMap[type]['iconClasses']
+    
     return (
       <label name={name}
-        className={`${labelClasses} ${checked ? checkedClasses : ''} ${disabled ? disabledClasses : ''}`}
+        className={`${commonClasses} ${labelClasses} ${disabled ? disabledClasses : ''}`}
       >
-          <input type="checkbox" className={inputClasses} disabled={disabled} checked={checked}
+          <input type={type} className={inputClasses} disabled={disabled} checked={checked}
             onClick={onClick} onChange={this.handleChange}
           />
-          <i className={boxClasses} />
+          <i className={iconClasses} />
           {label}
       </label>
     )
@@ -93,6 +135,10 @@ const checkboxExampleList = [
     label: 'Checkbox',
     checked: true,
     disabled: true
+  },
+  {
+    label: 'Radio',
+    radio: true
   }
 ]
 
