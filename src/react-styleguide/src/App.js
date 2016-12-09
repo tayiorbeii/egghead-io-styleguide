@@ -3,6 +3,7 @@ import { ButtonExamples, ButtonExampleCode, ButtonPropsTable } from './component
 import { InputExamples, InputExampleCode, InputPropsTable } from './components/Inputs/Input'
 import { CheckboxExamples, CheckboxExampleCode,
          CheckboxPropsTable } from './components/Checkboxes/Checkboxes'
+import RadioButtonGroup from './components/Radios/Radio'
 import CodeBlock from './components/GuideElements/CodeBlock'
 import PropTable from './components/GuideElements/PropTable'
 import './assets/stylesheets/build.css'
@@ -28,6 +29,11 @@ const GuideBlocks = [
   }
 ]
 
+const opts = [
+  { value: 'thing1', label: 'Thing One'},
+  { value: 'thing2', label: 'Thing Two'}
+]
+
 class App extends Component {
   render() {
     const GuideBlock = ({title, component, exampleCode, propRows}) => {
@@ -46,6 +52,7 @@ class App extends Component {
     return (
       <div>
         {GuideBlocks.map((block, i) => <GuideBlock {...block} key={i} />)}
+        <RadioButtonGroup optionList={opts} />
       </div>
     )
   }
