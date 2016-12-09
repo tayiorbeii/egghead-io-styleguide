@@ -10,6 +10,7 @@
     "react-scripts": "0.7.0"
   },
   "dependencies": {
+    "eslint": "^3.12.0",
     "font-awesome": "^4.7.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",

@@ -1,25 +1,25 @@
 import React, { Component } from 'react'
 
-const commonClasses = 'inline-flex v-top items-center lh-title f4 overflow-hidden'
-const inputClasses = 'o-0 absolute left--1'
+export const commonClasses = 'inline-flex v-top items-center lh-title f4 overflow-hidden'
+export const inputClasses = 'o-0 absolute left--1'
 const disabledClasses = 'disabled'
 
 const checkboxClasses = 'pointer eh-checkbox'
 const boxIconClasses = 'mr3 br2 ba b--white hover-b--green eh-checkbox-icon'
 
-const radioClasses = 'eh-radio'
-const radioIconClasses = 'mr3 br-pill ba b--white hover-b--green eh-radio-icon'
+// const radioClasses = 'eh-radio'
+// const radioIconClasses = 'mr3 br-pill ba b--white hover-b--green eh-radio-icon'
 
-const styleMap = {
-  checkbox: {
-    labelClasses: checkboxClasses,
-    iconClasses: boxIconClasses
-  },
-  radio: {
-    labelClasses: radioClasses,
-    iconClasses: radioIconClasses
-  }
-}
+// const styleMap = {
+//   checkbox: {
+//     labelClasses: checkboxClasses,
+//     iconClasses: boxIconClasses
+//   },
+//   radio: {
+//     labelClasses: radioClasses,
+//     iconClasses: radioIconClasses
+//   }
+// }
 
 /**
  * Unchecked Radio
@@ -45,8 +45,6 @@ class Checkbox extends Component {
     disabled: React.PropTypes.bool,
     onChange: React.PropTypes.func, // Called when user changes checked state
     onClick: React.PropTypes.func, // Called when checkbox is clicked
-    radio: React.PropTypes.bool, // Should be rendered as a radio (exclusive option)
-    toggle: React.PropTypes.bool // Should be rendered as a toggle (on or off)
   }
 
   constructor(props) {
@@ -58,61 +56,31 @@ class Checkbox extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  componentWillReceiveProps(nextProps) {
-    if ('checked' in nextProps) {
-      this.setState({ checked: nextProps.checked })
-    }
-  }
-
-  canToggle = () => {
-    const { disabled, radio } = this.props
-    const { checked } = this.state
-
-    console.log('Toggling')
-    return !disabled && !(radio && checked)
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if ('checked' in nextProps) {
+  //     this.setState({ checked: nextProps.checked })
+  //   }
+  // }
 
   handleChange = (e) => {
-    console.log('Clicked!')
     const { onChange, onClick } = this.props
     const { checked } = this.state
-
-    if (this.canToggle()) {
-      if (onClick) {
-        onClick(e, { ...this.props, checked: !!checked })
-      }
-      
-      if (onChange) {
-        onChange(e, { ...this.props, checked: !checked })
-      }
-      
-      this.setState({ checked: !checked })
-    }
+ 
+    this.setState({ checked: !checked })
   }
 
   render() {
-    const { name, label, disabled, onChange, onClick, radio=false, toggle=false } = this.props
+    const { name, label, disabled, onClick } = this.props
     const { checked } = this.state
-
-    let type = 'checkbox'
-    if (radio && !toggle) {
-      type = 'radio'
-    }
-    if (toggle && !radio) {
-      type = 'toggle'
-    }
-
-    const labelClasses = styleMap[type]['labelClasses']
-    const iconClasses = styleMap[type]['iconClasses']
     
     return (
       <label name={name}
-        className={`${commonClasses} ${labelClasses} ${disabled ? disabledClasses : ''}`}
+        className={`${commonClasses} ${checkboxClasses} ${disabled ? disabledClasses : ''}`}
       >
-          <input type={type} className={inputClasses} disabled={disabled} checked={checked}
+          <input type='checkbox' className={inputClasses} disabled={disabled} checked={checked}
             onClick={onClick} onChange={this.handleChange}
           />
-          <i className={iconClasses} />
+          <i className={boxIconClasses} />
           {label}
       </label>
     )
@@ -135,12 +103,23 @@ const checkboxExampleList = [
     label: 'Checkbox',
     checked: true,
     disabled: true
-  },
-  {
-    label: 'Radio',
-    radio: true
   }
 ]
+
+// const radioExampleList = [
+//   {
+//     label: 'This Radio',
+//     radio: true,
+//     name: 'radioDemo',
+//     value: 'first'
+//   },
+//   {
+//     label: 'That Radio',
+//     radio: true,
+//     name: 'radioDemo',
+//     value: 'second'
+//   }
+// ]
 
 /**
  * Checkbox Examples for Style Guide
