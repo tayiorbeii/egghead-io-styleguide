@@ -37,6 +37,7 @@ class Checkbox extends Component {
     const { disabled, radio } = this.props
     const { checked } = this.state
 
+    console.log('Toggling')
     return !disabled && !(radio && checked)
   }
 
@@ -45,7 +46,17 @@ class Checkbox extends Component {
     const { onChange, onClick } = this.props
     const { checked } = this.state
 
-    this.setState({ checked: !checked })
+    if (this.canToggle()) {
+      if (onClick) {
+        onClick(e, { ...this.props, checked: !!checked })
+      }
+      
+      if (onChange) {
+        onChange(e, { ...this.props, checked: !checked })
+      }
+      
+      this.setState({ checked: !checked })
+    }
   }
 
   render() {
