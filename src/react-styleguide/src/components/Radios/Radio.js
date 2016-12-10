@@ -31,10 +31,7 @@ class RadioButtonGroup extends Component {
   }
   
   handleChange = (e) => {
-    console.log('old state:', this.state)
-    console.log('e', e.target.id)
     this.setState({ selectedItem: e.target.id })
-    console.log('new state:', this.state)
   }
 
   render() {
