@@ -11,11 +11,16 @@ var task = {};
 
 var path = {
   build: {
-    html: 'dist/',
-    stylesheets: 'dist/assets/stylesheets/',
-    img: 'dist/assets/images/',
-    fonts: 'dist/assets/fonts/',
-    vendors: 'dist/assets/vendors/'
+    // html: 'dist/',
+    // stylesheets: 'dist/assets/stylesheets/',
+    // img: 'dist/assets/images/',
+    // fonts: 'dist/assets/fonts/',
+    // vendors: 'dist/assets/vendors/'
+    html: 'public/',
+    stylesheets: 'public/assets/stylesheets/',
+    img: 'public/assets/images/',
+    fonts: 'public/assets/fonts/',
+    vendors: 'public/assets/vendors/'
   },
   src: {
     html: 'src/*.html',
