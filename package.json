@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/eggheadio/egghead-io-styleguide/issues"
   },
-  "homepage": "https://github.com/eggheadio/egghead-io-styleguide#readme",
+  "homepage": "",
   "dependencies": {
     "autoprefixer": "^6.5.0",
     "browser-sync": "^2.16.0",

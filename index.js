@@ -3,7 +3,8 @@ var app = express();
 
 app.set('port', (process.env.PORT || 5000));
 
-app.use(express.static(__dirname + '/dist'));
+// app.use(express.static(__dirname + '/dist'));
+app.use(express.static(__dirname + '/build'));
 
 if(process.env.NODE_ENV === 'production') {
   app.use('/path', function(req, res, next) {  
