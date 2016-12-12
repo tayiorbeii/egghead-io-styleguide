@@ -24,8 +24,7 @@ class Checkbox extends Component {
   
     const checked = 'checked' in props ? props.checked : false
 
-    this.state = { checked: checked }
-    this.handleChange = this.handleChange.bind(this)
+    this.state = { checked }
   }
 
   handleChange = (e) => {

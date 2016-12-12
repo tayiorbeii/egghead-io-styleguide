@@ -12,7 +12,6 @@ class RadioButtonGroup extends Component {
   constructor(props) {
     super(props)
     this.state = { selectedItem: '' }
-    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange = (e) => {
