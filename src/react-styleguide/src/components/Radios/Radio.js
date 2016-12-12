@@ -2,22 +2,7 @@ import React, { Component } from 'react'
 import { commonLabelClasses, commonIconClasses, inputClasses, disabledClasses } from '../Checkboxes/Checkboxes'
 
 const radioClasses = 'eh-radio'
-const radioIconClasses = `${commonIconClasses} br-pill eh-checkbox-icon`
-
-/**
- * Unchecked Radio
- *<label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio">
-              <input type="radio" class="o-0 absolute left--1" name="radio">
-              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
-            </label>
- *
- * Checked Radio
- * <label class="inline-flex v-top items-center lh-title f4 overflow-hidden pointer eh-radio ml5">
-              <input type="radio" class="o-0 absolute left--1" name="radio" checked="">
-              <i class="mr3 br-pill ba b--white hover-b--green eh-radio-icon"></i>Radio
-            </label>
- *
- */
+const radioIconClasses = `${commonIconClasses} br-pill eh-radio-icon`
 
 class RadioButtonGroup extends Component {
   static propTypes = {
@@ -38,12 +23,12 @@ class RadioButtonGroup extends Component {
     const { optionList } = this.props
 
     const radioButton = (item) => {
-      return (
+    return (
         <label key={item.value}
           className={`${commonLabelClasses} ${radioClasses} ${item.disabled ? disabledClasses : ''}`}
         >
           <input type='radio' className={inputClasses} disabled={item.disabled}
-            selected={this.state.selectedItem === item.value}
+            checked={this.state.selectedItem === item.value}
             onChange={(e) => this.handleChange(e)} id={item.value}
           />
           <i className={radioIconClasses} />

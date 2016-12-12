@@ -35,6 +35,7 @@ const opts = [
 ]
 
 class App extends Component {
+
   render() {
     const GuideBlock = ({title, component, exampleCode, propRows}) => {
       return (
