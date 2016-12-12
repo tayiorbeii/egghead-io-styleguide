@@ -97,7 +97,6 @@ export const CheckboxExampleCode = [
   `<Checkbox label='Checkbox' checked />`,
   `<Checkbox label='Checkbox' disabled />`,
   `<Checkbox label='Checkbox' checked disabled />`,
-  
 ]
 
 /**
