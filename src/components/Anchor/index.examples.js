@@ -1,11 +1,11 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
-import {lorem} from 'faker'
+import {internet, lorem} from 'faker'
 import Anchor from '.'
 
-storiesOf('Anchor', module)
-  .add('default', () => (
-    <Anchor url='#'>
+storiesOf('Anchor')
+  .addWithInfo('API', () => (
+    <Anchor url={internet.url()}>
       {lorem.words()}
     </Anchor>
   ))

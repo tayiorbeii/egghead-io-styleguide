@@ -3,8 +3,8 @@ import {storiesOf} from '@kadira/storybook'
 import {lorem} from 'faker'
 import Split from '.'
 
-storiesOf('Split', module)
-  .add('default', () => (
+storiesOf('Split')
+  .addWithInfo('API', () => (
     <Split
       title={lorem.words()}
       main={lorem.text()}

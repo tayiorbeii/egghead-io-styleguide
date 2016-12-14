@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react'
 
 const Anchor = ({
-  url,
   children,
+  url,
 }) => (
   <a
     href={url}
@@ -14,8 +14,8 @@ const Anchor = ({
 )
 
 Anchor.propTypes = {
+  children: PropTypes.node.isRequired,
   url: PropTypes.string.isRequired,
-  children: PropTypes.node,
 }
 
 export default Anchor

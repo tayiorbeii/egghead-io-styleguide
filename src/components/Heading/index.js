@@ -2,7 +2,10 @@ import React, {PropTypes} from 'react'
 
 export const levels = ['1', '2', '3', '4', '5']
 
-const Heading = ({children, level}) => {
+const Heading = ({
+  children,
+  level,
+}) => {
 
   const outputByLevel = {
     1: (
@@ -41,7 +44,11 @@ const Heading = ({children, level}) => {
 
 Heading.propTypes = {
   children: PropTypes.node.isRequired,
-  level: PropTypes.oneOf(levels).isRequired,
+  level: PropTypes.oneOf(levels),
+}
+
+Heading.defaultProps = {
+  level: '1',
 }
 
 export default Heading

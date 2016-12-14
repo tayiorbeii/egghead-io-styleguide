@@ -1,20 +1,17 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
 import {lorem} from 'faker'
-import {map} from 'lodash'
-import GuideVariation from '../../utils/GuideVariation'
 import Heading, {levels} from '.'
 
-storiesOf('Heading', module)
+storiesOf('Heading')
 
-  .add('levels', () => (
-    <div>
-      {map(levels, level => (
-        <GuideVariation tooltip={level}>
-          <Heading level={level}>
-            {lorem.words()}
-          </Heading>
-        </GuideVariation>
-      ))}
-    </div>
+  .addWithInfo('API', () => (
+    <Heading>
+      {lorem.words()}
+    </Heading>
   ))
+
+  .addWithPropsCombinations('Combinations', Heading, {
+    level: levels,
+    children: [lorem.words()]
+  })

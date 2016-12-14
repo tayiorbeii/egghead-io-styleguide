@@ -3,8 +3,8 @@ import {storiesOf} from '@kadira/storybook'
 import {lorem} from 'faker'
 import Button from '.'
 
-storiesOf('Button', module)
-  .add('default', () => (
+storiesOf('Button')
+  .addWithInfo('API', () => (
     <Button> 
       {lorem.words()}
     </Button>

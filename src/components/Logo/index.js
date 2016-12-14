@@ -1,9 +1,11 @@
 import React from 'react'
 import logo from './logo.svg'
 
-export default () => (
+const Logo = () => (
   <img
     src={logo}
     alt="egghead.io logo"
   />
 )
+
+export default Logo

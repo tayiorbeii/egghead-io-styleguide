@@ -3,8 +3,8 @@ import {storiesOf} from '@kadira/storybook'
 import {name, image} from 'faker'
 import Avatar from '.'
 
-storiesOf('Avatar', module)
-  .add('default', () => (
+storiesOf('Avatar')
+  .addWithInfo('API', () => (
     <Avatar
       name={name.firstName()}
       url={image.avatar()}

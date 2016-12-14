@@ -24,8 +24,8 @@ export const types = {
 
 const Icon = ({
   type,
-  size = '1',
-  className = '',
+  size,
+  className,
 }) => (
   <span className={`
     fa
@@ -39,6 +39,10 @@ Icon.propTypes = {
   type: PropTypes.oneOf(keys(types)).isRequired,
   size: PropTypes.oneOf(keys(sizes)),
   className:  PropTypes.string,
+}
+
+Icon.defaultProps = {
+  size: '1',
 }
 
 export default Icon

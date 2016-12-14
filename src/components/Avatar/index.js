@@ -1,6 +1,9 @@
 import React, {PropTypes} from 'react'
 
-const Avatar = ({name, url}) => (
+const Avatar = ({
+  name,
+  url,
+}) => (
   <img
     alt={`Avatar for ${name}`}
     src={url}

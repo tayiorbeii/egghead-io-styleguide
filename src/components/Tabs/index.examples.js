@@ -3,8 +3,8 @@ import {storiesOf} from '@kadira/storybook'
 import {lorem} from 'faker'
 import Tabs from '.'
 
-storiesOf('Tabs', module)
-  .add('default', () => (
+storiesOf('Tabs')
+  .addWithInfo('API', () => (
     <Tabs groups={[
       {
         title: lorem.words(),

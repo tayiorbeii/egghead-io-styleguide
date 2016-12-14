@@ -1,9 +1,21 @@
-import React, {Component} from 'react'
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-Tabs.setUseDefaultStyles(false)
+import React, {Component, PropTypes} from 'react'
+import {
+  Tab as LibraryTab,
+  Tabs as LibraryTabs,
+  TabList as LibraryTabList,
+  TabPanel as LibraryTabPanel,
+} from 'react-tabs';
+LibraryTabs.setUseDefaultStyles(false)
 import {map} from 'lodash'
 
-export default class extends Component {
+export default class Tabs extends Component {
+
+  static propTypes = {
+    groups: PropTypes.arrayOf(React.PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      component: PropTypes.node.isRequired,
+    })).isRequired,
+  }
 
   state = {
     selected: 0,
@@ -19,11 +31,11 @@ export default class extends Component {
     const {groups} = this.props
 
     return (
-      <Tabs onSelect={this.handleSelect}>
+      <LibraryTabs onSelect={this.handleSelect}>
 
-        <TabList className='list pa0 ma0 bg-moon-gray flex-ns br2 br--top'>
+        <LibraryTabList className='list pa0 ma0 bg-moon-gray flex-ns br2 br--top'>
           {map(groups, (group, index) => (
-            <Tab
+            <LibraryTab
               key={index}
               className={`
                 f6
@@ -38,20 +50,20 @@ export default class extends Component {
               `}
             >
               {group.title}
-            </Tab>
+            </LibraryTab>
           ))}
-        </TabList>
+        </LibraryTabList>
 
         {map(groups, (group, index) => (
-          <TabPanel 
+          <LibraryTabPanel 
             key={index}
             className='pa3'
           >
             {group.component}
-          </TabPanel>
+          </LibraryTabPanel>
         ))}  
 
-      </Tabs>
+      </LibraryTabs>
     )
   }
 }
