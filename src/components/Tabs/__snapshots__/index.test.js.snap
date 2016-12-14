@@ -1,0 +1,70 @@
+exports[`test default 1`] = `
+<div
+  className="ReactTabs react-tabs"
+  data-tabs={true}
+  onClick={[Function]}
+  onKeyDown={[Function]}>
+  <ul
+    className="ReactTabs__TabList list pa0 ma0 bg-moon-gray flex-ns br2 br--top"
+    role="tablist">
+    <li
+      aria-controls="react-tabs-1"
+      aria-disabled="false"
+      aria-selected="true"
+      className="ReactTabs__Tab 
+                    f6
+                    pv3 ph4 ph3-ns
+                    ttu
+                    pointer
+                    bl bl-0-ns bb-ns bw2 bw1-ns
+                    b--orange black
+                   ReactTabs__Tab--selected"
+      id="react-tabs-0"
+      role="tab"
+      tabIndex="0">
+      String
+    </li>
+    <li
+      aria-controls="react-tabs-3"
+      aria-disabled="false"
+      aria-selected="false"
+      className="ReactTabs__Tab 
+                    f6
+                    pv3 ph4 ph3-ns
+                    ttu
+                    pointer
+                    bl bl-0-ns bb-ns bw2 bw1-ns
+                    b--transparent black-40
+                  "
+      id="react-tabs-2"
+      role="tab"
+      tabIndex={null}>
+      String
+    </li>
+  </ul>
+  <div
+    aria-labelledby="react-tabs-0"
+    className="ReactTabs__TabPanel pa3 ReactTabs__TabPanel--selected"
+    id="react-tabs-1"
+    role="tabpanel"
+    style={
+      Object {
+        "display": null,
+      }
+    }>
+    <div>
+      Component
+    </div>
+  </div>
+  <div
+    aria-labelledby="react-tabs-2"
+    className="ReactTabs__TabPanel pa3"
+    id="react-tabs-3"
+    role="tabpanel"
+    style={
+      Object {
+        "display": "none",
+      }
+    } />
+</div>
+`;

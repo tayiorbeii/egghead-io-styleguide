@@ -1,0 +1,8 @@
+exports[`test default 1`] = `
+<a
+  className="blue"
+  href="https://google.com"
+  target="_blank">
+  String
+</a>
+`;
