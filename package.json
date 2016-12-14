@@ -3,26 +3,23 @@
   "version": "0.1.0",
   "homepage": "TODO",
   "scripts": {
-    "dev": "open http://localhost:2000 && start-storybook -p 2000",
-    "test": "react-scripts test --env=jsdom",
+    "dev": "start-storybook -p 2000",
     "build:library": "react-scripts build",
     "build:storybook": "build-storybook",
-    "verify": "CI=true yarn test && yarn build:library && yarn build:storybook",
+    "verify": "yarn build:library && yarn build:storybook",
     "prepublish": "yarn build:library"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.5.2",
-    "faker": "^3.1.0",
     "react-scripts": "^0.8.4",
-    "react-test-renderer": "^15.4.1"
+    "react-storybook-addon-props-combinations": "^0.0.1"
   },
   "dependencies": {
     "font-awesome": "^4.6.3",
     "lodash": "^4.16.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-storybook-addon-props-combinations": "^0.0.1",
     "react-tabs": "^0.8.2",
     "tachyons": "^4.5.3"
   },

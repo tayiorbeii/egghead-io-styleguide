@@ -1,18 +1,18 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
-import {lorem} from 'faker'
+import {stringFixture, ComponentFixture} from '../../utils/Fixtures'
 import Tabs from '.'
 
 storiesOf('Tabs')
   .addWithInfo('API', () => (
     <Tabs groups={[
       {
-        title: lorem.words(),
-        component: <div>{lorem.paragraph()}</div>,
+        title: stringFixture,
+        component: <ComponentFixture />,
       },
       {
-        title: lorem.words(),
-        component: <div>{lorem.paragraph()}</div>,
+        title: stringFixture,
+        component: <ComponentFixture />,
       },
     ]} />
   ))

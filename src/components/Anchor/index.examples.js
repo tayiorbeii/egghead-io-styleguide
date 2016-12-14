@@ -1,11 +1,11 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
-import {internet, lorem} from 'faker'
+import {stringFixture, urlFixture} from '../../utils/Fixtures'
 import Anchor from '.'
 
 storiesOf('Anchor')
   .addWithInfo('API', () => (
-    <Anchor url={internet.url()}>
-      {lorem.words()}
+    <Anchor url={urlFixture}>
+      {stringFixture}
     </Anchor>
   ))

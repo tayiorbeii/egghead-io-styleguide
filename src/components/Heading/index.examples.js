@@ -1,17 +1,17 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
-import {lorem} from 'faker'
+import {stringFixture} from '../../utils/Fixtures'
 import Heading, {levels} from '.'
 
 storiesOf('Heading')
 
   .addWithInfo('API', () => (
     <Heading>
-      {lorem.words()}
+      {stringFixture}
     </Heading>
   ))
 
   .addWithPropsCombinations('Combinations', Heading, {
     level: levels,
-    children: [lorem.words()]
+    children: [stringFixture]
   })
