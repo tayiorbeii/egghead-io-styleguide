@@ -6,7 +6,7 @@ export const nameFixture = 'Jane'
 
 export const urlFixture = 'https://google.com'
 
-export const avatarImageUrlFixture = 'https://s3.amazonaws.com/uifaces/faces/twitter/kimcool/128.jpg'
+export const avatarImageUrlFixture = 'http://placehold.it/150x150?text=A+image'
 
 export const ComponentFixture = () => (
   <div>
