@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "open http://localhost:2000 && start-storybook -p 2000",
     "test": "react-scripts test --env=jsdom",
-    "build": "react-scripts build && build-storybook",
-    "verify": "CI=true yarn test && yarn build"
+    "build:library": "react-scripts build",
+    "build:storybook": "build-storybook",
+    "verify": "CI=true yarn test && yarn build:library && yarn build:storybook",
+    "prepublish": "build:library"
   },
   "devDependencies": {
     "@kadira/storybook": "^2.5.2",
