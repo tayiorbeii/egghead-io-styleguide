@@ -1,7 +1,8 @@
 {
   "name": "egghead-instructor-center",
   "version": "0.1.0",
-  "homepage": "TODO",
+  "homepage": "https://styleguide.egghead.io",
+  "main": "build/index.js",
   "scripts": {
     "dev": "start-storybook -p 2000",
     "build:library": "react-scripts build",
