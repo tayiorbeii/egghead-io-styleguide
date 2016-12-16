@@ -1,7 +1,7 @@
 {
-  "name": "egghead-instructor-center",
+  "name": "egghead-ui",
   "version": "0.1.0",
-  "homepage": "https://styleguide.egghead.io",
+  "homepage": "https://ui.egghead.io",
   "main": "build/index.js",
   "scripts": {
     "dev": "start-storybook -p 2000",
