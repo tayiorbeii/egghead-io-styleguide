@@ -1,5 +1,4 @@
 import 'font-awesome/css/font-awesome.min.css'
-import 'tachyons'
 import {configure, setAddon} from '@kadira/storybook'
 import infoAddon from '@kadira/react-storybook-addon-info';
 setAddon(infoAddon)

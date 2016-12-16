@@ -17,12 +17,13 @@
     "react-storybook-addon-props-combinations": "^0.0.1"
   },
   "dependencies": {
+    "css-loader": "^0.26.1",
     "font-awesome": "^4.6.3",
     "lodash": "^4.16.2",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-tabs": "^0.8.2",
-    "tachyons": "^4.5.3"
+    "tachyons-egghead": "^1.1.4"
   },
   "eslintConfig": {
     "extends": "react-app"
