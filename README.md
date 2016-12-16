@@ -1,22 +1,22 @@
 # egghead.io Style Guide
 
 This repo has two purposes:
-- [A component library for npm](https://www.npmjs.com/package/egghead-io-styleguide)
-- [A storybook for a living style guide with documentation](https://styleguide.egghead.io)
+- [A component library for npm](https://www.npmjs.com/package/egghead-ui)
+- [A storybook for a living style guide with documentation](https://ui.egghead.io)
 
 ---
 
 # Usage
 
 ```
-$ yarn add 'egghead-io-styleguide'`
+$ yarn add 'egghead-ui'`
 ```
 
 ```
-import {ComponentName} from 'egghead-io-styleguide'
+import {ComponentName} from 'egghead-ui'
 ```
 
-View [the storybook](https://styleguide.egghead.io) for visual examples and full API documentation.
+View [the storybook](https://ui.egghead.io) for visual examples and full API documentation.
 
 ---
 
@@ -46,4 +46,4 @@ View [the storybook](https://styleguide.egghead.io) for visual examples and full
   - Joel reviews and merges
   - Continuous deployment runs in Codeship
     - Publishes the latest component library version to npm.
-    - Deploys the latest storybook to [styleguide.egghead.io](https://styleguide.egghead.io).
+    - Deploys the latest storybook to [ui.egghead.io](https://ui.egghead.io).
