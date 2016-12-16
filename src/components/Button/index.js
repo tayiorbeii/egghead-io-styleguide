@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react'
-import 'tachyons-egghead'
 
 const Button = ({
   children, 
