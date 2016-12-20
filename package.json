@@ -8,13 +8,12 @@
     "build:library": "react-scripts build",
     "build:storybook": "build-storybook",
     "verify": "yarn build:library && yarn build:storybook",
-    "prepublish": "yarn build:library"
+    "prepublish": "yarn build:library",
+    "start": "react-scripts start",
+    "build": "yarn verify"
   },
   "devDependencies": {
-    "@kadira/react-storybook-addon-info": "^3.3.0",
-    "@kadira/storybook": "^2.5.2",
-    "react-scripts": "^0.8.4",
-    "react-storybook-addon-props-combinations": "^0.0.1"
+
   },
   "dependencies": {
     "css-loader": "^0.26.1",
@@ -23,12 +22,16 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-tabs": "^0.8.2",
-    "tachyons-egghead": "^1.1.4"
+    "tachyons-egghead": "^1.1.4",
+    "@kadira/react-storybook-addon-info": "^3.3.0",
+    "@kadira/storybook": "^2.5.2",
+    "react-scripts": "^0.8.4",
+    "react-storybook-addon-props-combinations": "^0.0.1"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=7.0.0"
   }
 }
