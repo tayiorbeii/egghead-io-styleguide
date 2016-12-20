@@ -4,6 +4,10 @@ This repo has two purposes:
 - [A component library for npm](https://www.npmjs.com/package/egghead-ui)
 - [A storybook for a living style guide with documentation](https://ui.egghead.io)
 
+### Known Issues
+
+`devDependencies` don't install on heroku. All deps need to be in the `dependencies` object.
+
 ---
 
 # Usage
