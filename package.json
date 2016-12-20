@@ -8,7 +8,9 @@
     "build:library": "react-scripts build",
     "build:storybook": "build-storybook",
     "verify": "yarn build:library && yarn build:storybook",
-    "prepublish": "yarn build:library"
+    "prepublish": "yarn build:library",
+    "start": "react-scripts start",
+    "build": "yarn verify"
   },
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "^3.3.0",
