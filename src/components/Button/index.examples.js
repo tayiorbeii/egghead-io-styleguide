@@ -3,33 +3,6 @@ import {storiesOf} from '@kadira/storybook'
 import {stringFixture, clickHandlerFixture} from '../../utils/Fixtures'
 import Button from '.'
 
-const buttonExampleList = [
-  {
-    children: 'Default'
-  },
-  {
-    type: 'primary',
-    size: 'cta',
-    children: 'Primary'
-  },
-  {
-    type: 'success',
-    outline: true,
-    children: 'Success'
-  },
-  {
-    type: 'warning',
-    size: 'small',
-    children: 'Warning'
-  },
-  {
-    type: 'danger',
-    size: 'small',
-    outline: true,
-    children: 'Danger'
-  }
-]
-
 const standardButtonExamples = [
   {type: 'default'},
   {type: 'primary'},
@@ -38,10 +11,12 @@ const standardButtonExamples = [
   {type: 'danger'}
 ]
 
+const dispStyles = 'flex flex-row justify-center flex-wrap items-center vh-100 bg-navy'
+
 // Standard Large Button (Default)
 storiesOf('Button')
   .addWithInfo('Large (Default)', `The Large Default Button is available in several different flavors.`, () => (
-    <div className='flex flex-row justify-center flex-wrap items-center'>
+    <div className={dispStyles}>
       {standardButtonExamples.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
@@ -57,7 +32,7 @@ storiesOf('Button')
 // Standard (Small) Button
 storiesOf('Button')
   .addWithInfo('Small', `This Small Button is available in several different flavors.`, () => (
-    <div className='flex flex-row justify-center flex-wrap items-center'>
+    <div className={dispStyles}>
       {standardButtonExamples.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
@@ -73,7 +48,7 @@ storiesOf('Button')
 // Standard (CTA) Button
 storiesOf('Button')
   .addWithInfo('CTA', `The CTA Button is sized for callouts.`, () => (
-    <div className='flex flex-row justify-center flex-wrap items-center'>
+    <div className={dispStyles}>
       {standardButtonExamples.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
@@ -90,7 +65,7 @@ storiesOf('Button')
 // Outline Button
 storiesOf('Button')
   .addWithInfo('Outline', `The Outline Button is available in all sizes (pictured in Large).`, () => (
-    <div className='flex flex-row justify-center flex-wrap items-center'>
+    <div className={dispStyles}>
       {standardButtonExamples.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
