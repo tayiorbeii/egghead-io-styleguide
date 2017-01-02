@@ -32,26 +32,19 @@ const buttonExampleList = [
 
 const buttonTypeExamples = ['default', 'primary', 'success', 'warning', 'danger']
 
-export const StandardButtonExamples = () => {
-  return (
+// Default Button
+storiesOf('Button')
+  .addWithInfo('Standard (Large)', `The Standard Button is available in several different flavors.`, () => (
     <div className='flex flex-row justify-center flex-wrap items-center'>
       {buttonTypeExamples.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
             <Button type={btn} onClick={clickHandlerFixture}>
-              {btn === '' ? 'Default' : btn}
+              {btn}
             </Button>
           </div>
         )
       })}
     </div>
-  )
-}
-
-
-// Default Button
-storiesOf('Button')
-  .addWithInfo('Standard', `The default Button, with no addtional styling.`, () => (
-    <StandardButtonExamples />
   ))
 
