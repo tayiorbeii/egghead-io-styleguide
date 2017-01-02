@@ -1,9 +1,6 @@
 import React, {PropTypes} from 'react'
 
 const commonClasses = 'link dib f5 fw6 tracked tc br2 ttu ba pointer'
-const lgBtnClasses = 'h3 pa3 eh-btn-primary'
-const ctaBtnClasses = 'lh-solid ph4 pv4 eh-cta'
-const smBtnClasses = 'h2 lh-solid pa3 eh-btn'
 
 const sizes = ['large', 'small', 'cta']
 const types = ['success', 'warning', 'danger', 'primary', 'default']
