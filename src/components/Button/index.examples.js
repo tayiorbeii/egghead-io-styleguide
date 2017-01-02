@@ -11,7 +11,7 @@ const standardButtonExamples = [
   {type: 'danger'}
 ]
 
-const dispStyles = 'flex flex-row justify-center flex-wrap items-center vh-100 bg-navy'
+const dispStyles = 'flex flex-row content-center justify-center flex-wrap items-center vh-100 bg-navy'
 
 // Standard Large Button (Default)
 storiesOf('Button')
