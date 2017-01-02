@@ -29,7 +29,7 @@ storiesOf('Button')
     </div>
   ))
 
-// Standard (Small) Button
+// Small Button
 storiesOf('Button')
   .addWithInfo('Small', `This Small Button is available in several different flavors.`, () => (
     <div className={dispStyles}>
@@ -45,14 +45,14 @@ storiesOf('Button')
     </div>
   ))
 
-// Standard (CTA) Button
+// XL Button
 storiesOf('Button')
-  .addWithInfo('CTA', `The CTA Button is sized for callouts.`, () => (
+  .addWithInfo('XL', `The XL Button is sized for callouts.`, () => (
     <div className={dispStyles}>
       {standardButtonExamples.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
-            <Button type={btn.type} size='cta' onClick={clickHandlerFixture}>
+            <Button type={btn.type} size='xl' onClick={clickHandlerFixture}>
               {btn.type}
             </Button>
           </div>
