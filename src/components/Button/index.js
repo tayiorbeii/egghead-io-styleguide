@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react'
+import React, { PropTypes } from 'react'
 
 const commonClasses = 'link dib f5 fw6 tracked tc br2 ttu ba pointer'
 
