@@ -39,11 +39,11 @@ const Button = ({href, type='default', size='large', outline=false, children}) =
 }
 
 Button.propTypes = {
-  href: React.PropTypes.string,
-  type: React.PropTypes.oneOf(types),
-  size: React.PropTypes.oneOf(sizes),
-  outline: React.PropTypes.bool,
-  children: React.PropTypes.string.isRequired
+  href: PropTypes.string,
+  type: PropTypes.oneOf(types),
+  size: PropTypes.oneOf(sizes),
+  outline: PropTypes.bool,
+  children: PropTypes.string.isRequired
 }
 
 export default Button
