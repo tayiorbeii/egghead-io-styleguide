@@ -45,14 +45,14 @@ storiesOf('Button')
     </div>
   ))
 
-// XL Button
+// extra-large Button
 storiesOf('Button')
-  .addWithInfo('XL', `The XL Button is sized for callouts.`, () => (
+  .addWithInfo('extra-large', `The extra-large Button is sized for callouts.`, () => (
     <div className={dispStyles}>
       {standardButtonExamples.map((btn, i) => {
         return (
           <div className='mb2 mh2' key={i}>
-            <Button type={btn.type} size='xl' onClick={clickHandlerFixture}>
+            <Button type={btn.type} size='extra-large' onClick={clickHandlerFixture}>
               {btn.type}
             </Button>
           </div>

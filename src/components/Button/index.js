@@ -2,13 +2,13 @@ import React, { PropTypes } from 'react'
 
 const commonClasses = 'link dib f5 fw6 tracked tc br2 ttu ba pointer'
 
-const sizes = ['large', 'small', 'xl']
+const sizes = ['large', 'small', 'extra-large']
 const types = ['success', 'warning', 'danger', 'primary', 'default']
 
 const sizedBtnClasses = {
   large: 'h3 pa3 eh-btn-primary',
   small: 'h2 lh-solid pa3 eh-btn',
-  xl: 'lh-solid ph4 pv4 eh-xl'
+  extra-large: 'lh-solid ph4 pv4 eh-extra-large'
 }
 
 const solidBtnClasses = {
