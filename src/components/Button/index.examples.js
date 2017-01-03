@@ -73,7 +73,7 @@ storiesOf('Button')
 // Outline Button
 storiesOf('Button')
   .addDecorator((story) => (<div className={decoratorClasses}>{story()}</div>))
-  .addWithInfo('Outline (All Types)', `The Outline Button is available in all sizes (pictured in Large).`, () => (
+  .addWithInfo('Outline (All Sizes)', `The Outline Button is available in all sizes (pictured in Large).`, () => (
     <div className={btnDisp}>
       {standardButtonExamples.map((btn, i) => {
         return (
