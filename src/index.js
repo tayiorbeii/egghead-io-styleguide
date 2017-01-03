@@ -1,6 +1,7 @@
 import AnchorImport from './components/Anchor'
 import AvatarImport from './components/Avatar'
 import ButtonImport from './components/Button'
+import DumbComponentImport from './components/DumbComponent'
 import HeadingImport from './components/Heading'
 import IconImport from './components/Icon'
 import LogoImport from './components/Logo'
@@ -11,6 +12,7 @@ import WellImport from './components/Well'
 export const Anchor = AnchorImport
 export const Avatar = AvatarImport
 export const Button = ButtonImport
+export const DumbComponent = DumbComponentImport
 export const Heading = HeadingImport
 export const Icon = IconImport
 export const Logo = LogoImport
