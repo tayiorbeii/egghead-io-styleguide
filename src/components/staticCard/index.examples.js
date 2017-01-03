@@ -1,11 +1,13 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
 import {stringFixture, clickHandlerFixture} from '../../utils/Fixtures'
-import DumbComponent from '.'
+import staticCard from '.'
 
-storiesOf('DumbComponent')
+storiesOf('static - Card')
   .addWithInfo('API', () => (
-    <DumbComponent onClick={clickHandlerFixture}>
-      {stringFixture}
-    </DumbComponent>
+    <div>
+      <staticCard onClick={clickHandlerFixture}>
+        {stringFixture}
+      </staticCard>
+    </div>
   ))
