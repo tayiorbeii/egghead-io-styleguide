@@ -47,7 +47,7 @@ storiesOf('Button')
 
 // extra-large Button
 storiesOf('Button')
-  .addWithInfo('extra-large', `The extra-large Button is sized for callouts.`, () => (
+  .addWithInfo('Extra Large', `The extra-large Button is sized for callouts.`, () => (
     <div className={dispStyles}>
       {standardButtonExamples.map((btn, i) => {
         return (
