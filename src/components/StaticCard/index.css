@@ -1,0 +1,44 @@
+.card-course {
+  padding-bottom: 10px;
+  max-width: 380px;
+}
+.card-course:before,
+.card-course:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+}
+.card-course:before {
+  bottom: 5px;
+  left: 9px;
+  right: 9px;
+  background: var(--gray);
+  z-index: 1;
+}
+.card-course:after {
+  bottom: 0px;
+  left: 18px;
+  right: 18px;
+  background: var(--dark-gray);
+  z-index: 0;
+}
+.card-course:hover .card-play-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+.card-play-btn {
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  transform: scale(0.5);
+  display: flex;
+  font-size: 20px;
+  opacity: 0;
+  transition: 150ms;
+}

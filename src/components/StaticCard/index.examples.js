@@ -5,6 +5,8 @@ import StaticCard from '.'
 storiesOf('Static: Card')
   .addWithInfo('API', () => (
     <div>
-      <StaticCard/>
+      <div className='flex justify-center items-center bg-dark-navy pv5'>
+        <StaticCard/>
+      </div>
     </div>
   ))
