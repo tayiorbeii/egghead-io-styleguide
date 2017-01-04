@@ -11,6 +11,12 @@ export const sizes = {
 }
 
 export const types = {
+  'success': 'check-circle',
+  'cancel': 'times-circle',
+  'add': 'plus-circle',
+  'warning': 'exclamation-circle',
+  'remove': 'minus-circle',
+  'question': 'question-circle',
   'menu': 'bars',
   'step-incomplete': 'square-o',
   'step-complete': 'check-square-o',
@@ -19,24 +25,28 @@ export const types = {
   'subscriber-minutes': 'clock-o',
   'revenue': 'money',
   'course': 'folder-open-o',
-  'lesson': 'file-o',
-  'success': 'check-circle',
-  'cancel': 'times-circle',
-  'add': 'plus-circle',
-  'warning': 'exclamation-circle',
-  'remove': 'minus-circle',
-  'question': 'question-circle'
+  'lesson': 'file-o'
+}
+
+export const colors = {
+  'success': 'green',
+  'primary': 'blue',
+  'warning': 'yellow',
+  'danger': 'red',
+  'light': 'light-gray'
 }
 
 const Icon = ({
   type,
   size,
+  color,
   className,
 }) => (
   <span className={`
     fa
     fa-${types[type]} 
     ${sizes[size]}
+    ${colors[color]}
     ${className}
   `} />
 )
@@ -44,6 +54,7 @@ const Icon = ({
 Icon.propTypes = {
   type: PropTypes.oneOf(keys(types)).isRequired,
   size: PropTypes.oneOf(keys(sizes)),
+  color: PropTypes.oneOf(keys(colors)),
   className:  PropTypes.string,
 }
 
