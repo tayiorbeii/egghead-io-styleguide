@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 
 import './index.css'
 
-const StaticCard = ({
+const Card = ({
   className,
 }) => (
   <div className={`relative card-course ${className}`}>
@@ -21,8 +21,8 @@ const StaticCard = ({
   </div>
 )
 
-StaticCard.propTypes = {
+Card.propTypes = {
   className: PropTypes.string,
 }
 
-export default StaticCard
+export default Card
