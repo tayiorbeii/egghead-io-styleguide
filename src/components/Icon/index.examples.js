@@ -3,7 +3,7 @@ import {keys} from 'lodash'
 import {storiesOf} from '@kadira/storybook'
 import Icon, {sizes, types} from './index'
 
-storiesOf('Icon')
+storiesOf('Icons')
 
   .addWithInfo('API', () => (
     <Icon type='more-info' />

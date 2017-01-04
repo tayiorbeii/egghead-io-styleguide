@@ -20,6 +20,12 @@ export const types = {
   'revenue': 'money',
   'course': 'folder-open-o',
   'lesson': 'file-o',
+  'success': 'check-circle',
+  'cancel': 'times-circle',
+  'add': 'plus-circle',
+  'warning': 'exclamation-circle',
+  'remove': 'minus-circle',
+  'question': 'question-circle'
 }
 
 const Icon = ({
