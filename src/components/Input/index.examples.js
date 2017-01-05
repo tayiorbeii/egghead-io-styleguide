@@ -26,6 +26,18 @@ storiesOf('Input')
     <Input placeholder='Disabled' disabled />
   ))
 
+// Field with Error Message
+storiesOf('Input')
+  .addDecorator((story) => (<div className={decoratorClasses}>{story()}</div>))
+  .addWithInfo('Field with Error', () => (
+    <Input
+      value='Error'
+      required
+      error
+      errorMsg='Password must contain at least 8 characters.'
+      icon='error'
+    />
+  ))
 
 
 

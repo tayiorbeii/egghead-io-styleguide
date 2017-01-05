@@ -11,9 +11,18 @@ const successClasses = 'white b--green focus-b--green'
 const disabledClasses = 'disabled'
 const inputTypes = ['text', 'password']
 
+const inputIconClasses = 'absolute eh-input-status-icon'
+
+const iconMap = {
+  error: <Icon type='cancel' color='danger' className={inputIconClasses} />
+}
+
+
 const Input = ({type='text', placeholder, required=false, error=false,
                 errorMsg, disabled=false, value, icon}) => {
   let inputStyles = standardClasses
+
+  const fieldIcon = iconMap[icon]
 
   // If field is required, set style to error or success
   if (required) {
@@ -22,10 +31,14 @@ const Input = ({type='text', placeholder, required=false, error=false,
 
   return (
     <div className='relative eh-text-field-wrapper'>
-      <input type={type} placeholder={placeholder} required={required} disabled={disabled} defaultValue={value}
+      <input type={type}
+        placeholder={placeholder}
+        required={required}
+        disabled={disabled}
+        defaultValue={value}
         className={`${commonClasses} ${inputStyles} ${disabled ? disabledClasses : ''}`}
       />
-      {icon}
+      {fieldIcon}
       {errorMsg
         ? <div className={errorMsgClasses}>{errorMsg}</div>
         : null 
@@ -40,6 +53,7 @@ Input.propTypes = {
   required: React.PropTypes.bool,
   error: React.PropTypes.bool,
   errorMsg: React.PropTypes.string,
+  icon: React.PropTypes.string,
   disabled: React.PropTypes.bool,
   defaultValue: React.PropTypes.string
 }
