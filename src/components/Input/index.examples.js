@@ -39,6 +39,17 @@ storiesOf('Input')
     />
   ))
 
+// Success Field
+storiesOf('Input')
+  .addDecorator((story) => (<div className={decoratorClasses}>{story()}</div>))
+  .addWithInfo('Password Success Field', () => (
+    <Input
+      value='Password'
+      required
+      type='password'
+      icon='success'
+    />
+  ))
 
 
 
