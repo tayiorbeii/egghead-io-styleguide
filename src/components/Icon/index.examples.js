@@ -64,6 +64,13 @@ storiesOf('Icons')
     <Icon type='lesson' />
   ))
 
+  .addWithInfo('Refresh', () => (
+    <Icon
+      type='refresh' 
+      spin
+    />
+  ))
+
   .addWithPropsCombinations('Size & Color Combinations', Icon, {
     size: keys(sizes),
     type: keys(types),
