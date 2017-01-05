@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 import {keys} from 'lodash'
 import Icon from '../Icon'
 
-const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field'
+const commonClasses = 'db w-100 pl3 pr5 pv3 lh-copy br2 bg-dark-navy ba eh-text-field sans-serif'
 const standardClasses = 'white b--gray focus-b-gray'
 const errorClasses = 'red b--red focus-b--red'
 const errorMsgClasses = 'db red f5 sans-serif mt3'
