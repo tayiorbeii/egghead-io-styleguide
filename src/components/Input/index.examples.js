@@ -2,6 +2,7 @@ import React from 'react'
 import {keys} from 'lodash'
 import {storiesOf} from '@kadira/storybook'
 import Input from './index'
+import { PasswordTooltip } from '../Tooltip'
 
 const decoratorClasses = 'flex flex-column content-center justify-around flex-wrap items-center vh-100 bg-navy'
 
@@ -51,14 +52,18 @@ storiesOf('Input')
     />
   ))
 
+// Input Block with Password Tooltip
+storiesOf('Input')
+  .addDecorator((story) => (<div className={decoratorClasses}>{story()}</div>))
+  .addWithInfo('Password Field with Tooltip', () => (
+    <div className='w-50 center'>
+      <Input
+        value='Password'
+        required
+        type='password'
+        icon='success'
+      />
+      <PasswordTooltip />
+    </div>
+  ))
 
-
-
-
-
-
-  // .addWithPropsCombinations('Size & Color Combinations', Icon, {
-  //   size: keys(sizes),
-  //   type: keys(types),
-  //   color: keys(colors)
-  // })
