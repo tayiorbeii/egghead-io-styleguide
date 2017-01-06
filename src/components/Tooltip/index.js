@@ -1,5 +1,7 @@
 import React, {PropTypes} from 'react'
 
+const passStrengthValues = [10, 20, 25, 30, 33, 34, 40, 50, 60, 70, 75, 80, 90, 100]
+
 const Tooltip = ({children}) => {
   const ttClasses = 'relative db br2 w-100 mt4 pa3 sans-serif navy bg-white eh-input-tooltip'  
   return (
@@ -16,7 +18,6 @@ Tooltip.propTypes = {
  * Password-specific Tooltip
  */
 const PassStrength = ({strength}) => {
-  // Strength Values (tachyon widths): 10, 20, 25, 30, 33, 34, 40, 50, 60, 70, 75, 80, 90, 100
   // TODO: Map strength value to a word (e.g. "Weak", "Good", "Strong")
   // TODO: Map strength value to appropriate width
   const width = `w-${strength}`
@@ -34,7 +35,7 @@ const PassStrength = ({strength}) => {
   )
 }
 PassStrength.propTypes = {
-  strength: React.PropTypes.number.isRequired
+  strength: React.PropTypes.oneOf(passStrengthValues)
 }
 
 export const PasswordTooltip = () => {
