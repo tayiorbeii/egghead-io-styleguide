@@ -22,7 +22,7 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-tabs": "^0.8.2",
-    "tachyons-egghead": "^1.1.5",
+    "tachyons-egghead": "^1.1.7",
     "@kadira/react-storybook-addon-info": "^3.3.0",
     "@kadira/storybook": "^2.5.2",
     "react-scripts": "^0.8.4",

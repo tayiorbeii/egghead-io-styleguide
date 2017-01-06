@@ -3,6 +3,7 @@ node_modules
 .DS_Store
 npm-debug.log
 /.idea
+.tern-port
 
 # compiled
 storybook-static/
