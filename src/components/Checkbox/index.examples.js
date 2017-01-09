@@ -11,3 +11,15 @@ storiesOf('Checkbox')
     <Checkbox label='Checkbox' />
   ))
 
+  .addWithInfo('Checked', () => (
+    <Checkbox label='Checkbox' checked />
+  ))
+
+  .addWithInfo('Unchecked (Disabled)', () => (
+    <Checkbox label='Checkbox' disabled />
+  ))
+
+  .addWithInfo('Checked (Disabled)', () => (
+    <Checkbox label='Checkbox' checked disabled />
+  ))
+
