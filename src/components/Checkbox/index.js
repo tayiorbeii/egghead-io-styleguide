@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import Icon from '../Icon'
 
 export const commonLabelClasses = 'inline-flex v-top items-center lh-title f4 white sans-serif overflow-hidden pointer'
 export const commonIconClasses = 'mr3 ba b--white hover-b--green'
@@ -45,7 +46,7 @@ class Checkbox extends Component {
           <input type='checkbox' className={inputClasses} disabled={disabled} checked={checked}
             onClick={onClick} onChange={this.handleChange}
           />
-          <i className={boxIconClasses} />
+          <Icon type={checked ? 'box-check' : 'box'} size={2} className={boxIconClasses} />
           {label}
       </label>
     )

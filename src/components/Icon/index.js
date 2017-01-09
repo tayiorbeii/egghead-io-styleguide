@@ -20,6 +20,7 @@ export const types = {
   'menu': 'bars',
   'box': 'square-o',
   'box-check': 'check-square-o',
+  'check': 'check',
   'close': 'close',
   'info': 'info-circle',
   'clock': 'clock-o',
