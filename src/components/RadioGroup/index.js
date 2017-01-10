@@ -6,7 +6,12 @@ const radioIconClasses = `${commonIconClasses} br-pill eh-radio-icon`
 
 class RadioButtonGroup extends Component {
   static propTypes = {
-    optionList: React.PropTypes.array.isRequired
+    optionList: React.PropTypes.arrayOf(React.PropTypes.shape({
+      value: React.PropTypes.string.isRequired,
+      label: React.PropTypes.string.isRequired,
+      checked: React.PropTypes.bool,
+      disabled: React.PropTypes.bool
+    })).isRequired
   }
 
   constructor(props) {
