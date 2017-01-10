@@ -1,7 +1,7 @@
 import React from 'react'
 import {keys} from 'lodash'
 import {storiesOf} from '@kadira/storybook'
-import Checkbox from './index'
+import Checkbox from '.'
 
 const decoratorClasses = 'flex flex-column content-center justify-around flex-wrap items-center vh-100 bg-navy'
 
