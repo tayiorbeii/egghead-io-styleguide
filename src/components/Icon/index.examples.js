@@ -39,6 +39,10 @@ storiesOf('Icons')
   .addWithInfo('Box (Checked)', () => (
     <Icon type='box-check' />
   ))
+  
+  .addWithInfo('Check', () => (
+    <Icon type='check' />    
+  ))
 
   .addWithInfo('Close', () => (
     <Icon type='close' />
