@@ -34,6 +34,9 @@
 .card-playlist {
   max-width: 380px;
 }
+.card-course.expanded-horizontal {
+  max-width: 760px;
+}
 
 /* Course Card */
 .card-course .card-play-btn {
@@ -42,6 +45,9 @@
 }
 .card-course:hover .card-play-btn {
   opacity: 1;
+}
+.card-course .card-progress-list-item {
+  
 }
 
 /* Lesson Card */
@@ -59,15 +65,15 @@
   background: var(--turquoise);
 }
 .card-playlist .card-progress-list-item.viewed:after {
-  background: var(--turquoise);
+  border-color: var(--turquoise);
 }
 .card-playlist .card-progress-list-item.next:before {
   border-color: transparent transparent transparent var(--turquoise);
-  box-shadow: 0 0 0 10px var(--tag-gray);
+  box-shadow: 0 0 0 6px var(--tag-gray);
   background: var(--tag-gray);
 }
 .card-playlist .card-progress-list-item.next:hover:before {
-  box-shadow: 0 0 0 10px var(--white);
+  box-shadow: 0 0 0 6px var(--white);
   background: var(--white);
 }
 .card-playlist .card-play-btn {
@@ -127,6 +133,10 @@
   top: 22px;
   z-index: 2;
 }
+.card-progress-list-item:hover:before {
+  background: var(--white);
+  box-shadow: 0 0 0 1px var(--white);
+}
 .card-progress-list-item.viewed {
   color: var(--gray); /* could be applied to markup as Tachyons class */
 }
@@ -137,14 +147,18 @@
 .card-progress-list-item:after {
   width: 1px;
   height: 100%;
-  border-radius: 50%;
-  background: var(--light-gray);
+  border-width: 0 0 0 1px;
+  border-style: solid;
+  border-color: var(--light-gray);
   left: 24px;
-  top: 11px;
+  top: 32px;
   z-index: 1;
 }
 .card-progress-list-item.viewed:after {
-  background: var(--orange);
+  border-color: var(--orange);
+}
+.card-progress-list-item.pre-next:after {
+  border-style: dashed;
 }
 .card-progress-list-item.next:before {
   left: 21px;
