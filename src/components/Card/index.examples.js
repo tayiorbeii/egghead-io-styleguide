@@ -1,8 +1,8 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
-//import Card from '.'
 import CourseCard from './CourseCard'
 import LessonCard from './LessonCard'
+import PlaylistCard from './PlaylistCard'
 import testData from './testData'
 import './index.css'
 
@@ -24,6 +24,13 @@ storiesOf('Cards')
   .addWithInfo('Lesson Card', () => (
     <div className={representClasses}>
       <LessonCard title={testData.title} author={testData.author} meta={testData.meta} />
+    </div>
+  ))
+
+storiesOf('Cards')
+  .addWithInfo('Playlist Card', () => (
+    <div className={representClasses}>
+      <PlaylistCard title={testData.title} author={testData.author} meta={testData.meta} />
     </div>
   ))
 

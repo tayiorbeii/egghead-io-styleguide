@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react'
 import { keys } from 'lodash'
 import { CourseMeta, CourseHeader } from './CourseCard'
 import { LessonMeta, LessonHeader } from './LessonCard'
+import { PlaylistMeta, PlaylistHeader } from './PlaylistCard'
 import './index.css'
 
 const commonCardClasses = 'relative card'
