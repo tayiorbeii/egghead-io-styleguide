@@ -7,7 +7,7 @@ import Playlist from '../Playlist/'
 import './index.css'
 
 const commonCardClasses = 'relative card'
-const commonInnerClasses = 'flex flex-column items-center br2 bg-white navy relative z-1 card-course-inner'
+const commonInnerClasses = 'flex flex-column items-center bg-white navy relative z-1 card-course-inner br2'
 const enhancedInnerClasses = `${commonInnerClasses} overflow-hidden pa4 pointer`
 const footerClasses = 'flex justify-between self-stretch items-center' 
 const pillClasses = 'f6 lh-title ttu fw6 ph3 pv1 br-pill tracked'
@@ -97,8 +97,8 @@ CardBody.propTypes = {
 const Card = ({title, author, type, meta, expanded}) => {
   console.log('expanded: ', expanded)
   return (
-    <div className={cardTypes[type]['cardClasses']}> 
-      <div className={cardTypes[type]['innerClasses']}>
+    <div className={`${cardTypes[type]['cardClasses']}`}> 
+      <div className={`${cardTypes[type]['innerClasses']} ${expanded ? 'br--top' : null}`}> 
         <CardHeader type={type} meta={meta} />
         <CardBody title={title} author={author} />
         <CardFooter type={type} meta={meta} />
