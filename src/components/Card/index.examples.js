@@ -1,6 +1,8 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
 //import Card from '.'
+import CourseCard from './CourseCard'
+import testData from './testData'
 import './index.css'
 
 import imgCourseCard from './assets/temp/img-course-card.png'
@@ -9,6 +11,13 @@ import imgAngular from './assets/temp/angular.svg'
 import imgJs from './assets/temp/js.svg'
 
 const representClasses = 'flex justify-center items-center bg-dark-navy pv5'
+
+storiesOf('Cards')
+  .addWithInfo('Course Card', () => (
+    <div className={representClasses}>
+      <CourseCard title={testData.title} author={testData.author} meta={testData.meta} />
+    </div>
+  ))
 
 storiesOf('Static: Cards')
   .addWithInfo('Course Card', () => (
