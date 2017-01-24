@@ -3,6 +3,7 @@ import { keys } from 'lodash'
 import { CourseMeta, CourseHeader } from './CourseCard'
 import { LessonMeta, LessonHeader } from './LessonCard'
 import { PlaylistMeta, PlaylistHeader } from './PlaylistCard'
+import Playlist from '../Playlist/'
 import './index.css'
 
 const commonCardClasses = 'relative card'
@@ -93,13 +94,26 @@ CardBody.propTypes = {
   author: PropTypes.string.isRequired
 }
 
-const Card = ({title, author, type, meta}) => {
+const Card = ({title, author, type, meta, expanded}) => {
+  console.log('expanded: ', expanded)
   return (
     <div className={cardTypes[type]['cardClasses']}> 
       <div className={cardTypes[type]['innerClasses']}>
         <CardHeader type={type} meta={meta} />
         <CardBody title={title} author={author} />
         <CardFooter type={type} meta={meta} />
+      </div>
+      <div>
+        { expanded === 'vertical'
+          ? (
+            <div className='relative w-100 z-1 overflow-hidden pv3 br2 br--bottom bg-tag-gray'
+              style={{height: '290px'}}
+            >
+              <Playlist playlist={meta.playlist} />
+            </div>
+          )
+          : null
+        }
       </div>
     </div>
   )

@@ -20,14 +20,21 @@ storiesOf('Cards')
     </div>
   ))
 
-storiesOf('Cards')
+  .addWithInfo('Course Card Expanded Vertical', () => (
+    <div className={representClasses}>
+      <CourseCard title={testData.title}
+        author={testData.author}
+        meta={testData.meta}
+        expanded='vertical' />
+    </div>
+  ))
+
   .addWithInfo('Lesson Card', () => (
     <div className={representClasses}>
       <LessonCard title={testData.title} author={testData.author} meta={testData.meta} />
     </div>
   ))
 
-storiesOf('Cards')
   .addWithInfo('Playlist Card', () => (
     <div className={representClasses}>
       <PlaylistCard title={testData.title} author={testData.author} meta={testData.meta} />
