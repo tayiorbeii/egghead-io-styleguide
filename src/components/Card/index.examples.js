@@ -29,6 +29,16 @@ storiesOf('Cards')
     </div>
   ))
 
+  .addWithInfo('Course Card Expanded Horizontal', () => (
+    <div className={representClasses}>
+      <CourseCard title={testData.title}
+        author={testData.author}
+        meta={testData.meta}
+        expanded='horizontal' />
+    </div>
+  ))
+  
+
   .addWithInfo('Lesson Card', () => (
     <div className={representClasses}>
       <LessonCard title={testData.title} author={testData.author} meta={testData.meta} />

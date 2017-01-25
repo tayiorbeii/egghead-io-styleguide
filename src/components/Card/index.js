@@ -95,19 +95,33 @@ CardBody.propTypes = {
 }
 
 const Card = ({title, author, type, meta, expanded}) => {
+  const extendedClasses = 'relative w-100 z-1 overflow-hidden pv3 bg-tag-gray br2'
   console.log('expanded: ', expanded)
   return (
-    <div className={`${cardTypes[type]['cardClasses']}`}> 
-      <div className={`${cardTypes[type]['innerClasses']} ${expanded ? 'br--top' : null}`}> 
+    <div className={`${cardTypes[type]['cardClasses']} ${expanded === 'horizontal' ? 'flex expanded-horizontal' : null}`}> 
+      <div className={`
+        ${cardTypes[type]['innerClasses']}
+        ${!expanded ? 'br2' : null}
+        ${expanded === 'vertical' ? 'br2 br--top' : null}
+        ${expanded === 'horizontal' ? 'br2 br--left' : null}
+      `}> 
         <CardHeader type={type} meta={meta} />
         <CardBody title={title} author={author} />
         <CardFooter type={type} meta={meta} />
       </div>
-      <div>
+      <div className={`${expanded === 'vertical' ? `${extendedClasses} br--bottom` : null}`}>
         { expanded === 'vertical'
           ? (
-            <div className='relative w-100 z-1 overflow-hidden pv3 br2 br--bottom bg-tag-gray'
-              style={{height: '290px'}}
+            <div style={{height: '290px'}}>
+              <Playlist playlist={meta.playlist} />
+            </div>
+          )
+          : null
+        }
+        { expanded === 'horizontal'
+          ? (
+            <div className={`${extendedClasses} br2 br--right`}
+              style={{height: 'auto', maxHeight: '475px'}}
             >
               <Playlist playlist={meta.playlist} />
             </div>
