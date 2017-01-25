@@ -109,7 +109,10 @@ const Card = ({title, author, type, meta, expanded}) => {
         <CardBody title={title} author={author} />
         <CardFooter type={type} meta={meta} />
       </div>
-      <div className={`${expanded === 'vertical' ? `${extendedClasses} br--bottom` : null}`}>
+      <div className={`
+        ${expanded === 'vertical' ? `${extendedClasses} br--bottom` : null}
+        ${expanded === 'horizontal' ? `${extendedClasses} br--right` : null}
+      `}>
         { expanded === 'vertical'
           ? (
             <div style={{height: '290px'}}>
@@ -120,9 +123,7 @@ const Card = ({title, author, type, meta, expanded}) => {
         }
         { expanded === 'horizontal'
           ? (
-            <div className={`${extendedClasses} br2 br--right`}
-              style={{height: 'auto', maxHeight: '475px'}}
-            >
+            <div style={{height: 'auto', maxHeight: '475px'}}>
               <Playlist playlist={meta.playlist} />
             </div>
           )
