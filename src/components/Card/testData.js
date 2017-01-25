@@ -4,7 +4,7 @@ import imgRx from './assets/temp/rx.svg'
 
 const testData = {
   title: 'Introduction to RxJS Marble Testing Two lines headline',
-  author: 'Joe Maddalone',
+  instructor: 'Joe Maddalone',
   meta: {
     courseImg: imgCourseCard,
     langImg: imgJs,

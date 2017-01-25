@@ -30,14 +30,14 @@ CourseHeader.propTypes = {
 }
 
 
-const CourseCard = ({title, author, meta, expanded=false}) => {
+const CourseCard = ({title, instructor, meta, expanded=false}) => {
   return (
-    <Card title={title} author={author} type='course' meta={meta} expanded={expanded}/>
+    <Card title={title} instructor={instructor} type='course' meta={meta} expanded={expanded}/>
   )
 }
 CourseCard.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  instructor: PropTypes.string.isRequired,
   expanded: PropTypes.oneOf(expansions),
   meta: PropTypes.object
 }

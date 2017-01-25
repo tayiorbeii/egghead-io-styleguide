@@ -3,14 +3,14 @@ import PlayButton from '../Button/PlayButton'
 import Playlist from '../Playlist/'
 import Card from './'
 
-export const PlaylistCard = ({title, author, meta}) => {
+export const PlaylistCard = ({title, instructor, meta}) => {
   return (
-    <Card title={title} author={author} type='playlist' meta={meta} />
+    <Card title={title} instructor={instructor} type='playlist' meta={meta} />
   )
 }
 PlaylistCard.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  instructor: PropTypes.string.isRequired,
   meta: PropTypes.object
 }
 

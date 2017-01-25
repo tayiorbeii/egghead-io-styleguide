@@ -43,7 +43,7 @@ const cardTypes = {
 }
 
 const titleHeadingClasses = 'f3 tc mt4 mb2 avenir fw5'
-const authorNameClasses = 'f6 dark-gray o-50 mb4 tc'
+const instructorNameClasses = 'f6 dark-gray o-50 mb4 tc'
 
 const MaterialType = ({type}) => {
   return (
@@ -81,26 +81,26 @@ CardFooter.propTypes = {
   type: PropTypes.string.isRequired
 }
 
-const CardBody = ({title, author}) => {
+const CardBody = ({title, instructor}) => {
   return (
     <div>
       <h3 className={titleHeadingClasses}>{title}</h3>
-      <div className={authorNameClasses}>{author}</div>
+      <div className={instructorNameClasses}>{instructor}</div>
     </div>
   )
 }
 CardBody.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired
+  instructor: PropTypes.string.isRequired
 }
 
-const Card = ({title, author, type, meta, expanded}) => {
+const Card = ({title, instructor, type, meta, expanded}) => {
   const extendedClasses = 'relative w-100 z-1 overflow-hidden pv3 bg-tag-gray br2'
   return (
     <div className={`${cardTypes[type]['cardClasses']} ${expanded === 'horizontal' ? 'flex expanded-horizontal' : ''}`}> 
       <div className={`${cardTypes[type]['innerClasses']} ${!expanded ? 'br2' : ''} ${expanded === 'vertical' ? 'br2 br--top' : ''} ${expanded === 'horizontal' ? 'br2 br--left' : ''}`}>
         <CardHeader type={type} meta={meta} />
-        <CardBody title={title} author={author} />
+        <CardBody title={title} instructor={instructor} />
         <CardFooter type={type} meta={meta} />
       </div>
       <div className={`${expanded === 'vertical' ? `${extendedClasses} br--bottom` : ''} ${expanded === 'horizontal' ? `${extendedClasses} br--right` : ''}`}
@@ -128,7 +128,7 @@ const Card = ({title, author, type, meta, expanded}) => {
 }
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  instructor: PropTypes.string.isRequired,
   type: PropTypes.oneOf(keys(cardTypes)),
   meta: PropTypes.object
 }

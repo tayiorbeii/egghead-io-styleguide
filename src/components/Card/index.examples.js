@@ -16,14 +16,14 @@ const representClasses = 'flex justify-center items-center bg-dark-navy pv5'
 storiesOf('Cards')
   .addWithInfo('Course Card', () => (
     <div className={representClasses}>
-      <CourseCard title={testData.title} author={testData.author} meta={testData.meta} />
+      <CourseCard title={testData.title} instructor={testData.instructor} meta={testData.meta} />
     </div>
   ))
 
   .addWithInfo('Course Card Expanded Vertical', () => (
     <div className={representClasses}>
       <CourseCard title={testData.title}
-        author={testData.author}
+        instructor={testData.instructor}
         meta={testData.meta}
         expanded='vertical' />
     </div>
@@ -32,7 +32,7 @@ storiesOf('Cards')
   .addWithInfo('Course Card Expanded Horizontal', () => (
     <div className={representClasses}>
       <CourseCard title={testData.title}
-        author={testData.author}
+        instructor={testData.instructor}
         meta={testData.meta}
         expanded='horizontal' />
     </div>
@@ -41,13 +41,13 @@ storiesOf('Cards')
 
   .addWithInfo('Lesson Card', () => (
     <div className={representClasses}>
-      <LessonCard title={testData.title} author={testData.author} meta={testData.meta} />
+      <LessonCard title={testData.title} instructor={testData.instructor} meta={testData.meta} />
     </div>
   ))
 
   .addWithInfo('Playlist Card', () => (
     <div className={representClasses}>
-      <PlaylistCard title={testData.title} author={testData.author} meta={testData.meta} />
+      <PlaylistCard title={testData.title} instructor={testData.instructor} meta={testData.meta} />
     </div>
   ))
 

@@ -22,14 +22,14 @@ LessonHeader.propTypes = {
   meta: PropTypes.object.isRequired
 }
 
-const LessonCard = ({title, author, type, meta}) => {
+const LessonCard = ({title, instructor, type, meta}) => {
   return (
-    <Card title={title} author={author} type='lesson' meta={meta} />
+    <Card title={title} instructor={instructor} type='lesson' meta={meta} />
   )
 }
 LessonCard.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
+  instructor: PropTypes.string.isRequired,
   meta: PropTypes.object
 }
 
