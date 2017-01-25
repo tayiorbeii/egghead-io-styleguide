@@ -98,21 +98,15 @@ const Card = ({title, author, type, meta, expanded}) => {
   const extendedClasses = 'relative w-100 z-1 overflow-hidden pv3 bg-tag-gray br2'
   console.log('expanded: ', expanded)
   return (
-    <div className={`${cardTypes[type]['cardClasses']} ${expanded === 'horizontal' ? 'flex expanded-horizontal' : null}`}> 
-      <div className={`
-        ${cardTypes[type]['innerClasses']}
-        ${!expanded ? 'br2' : null}
-        ${expanded === 'vertical' ? 'br2 br--top' : null}
-        ${expanded === 'horizontal' ? 'br2 br--left' : null}
-      `}> 
+    <div className={`${cardTypes[type]['cardClasses']} ${expanded === 'horizontal' ? 'flex expanded-horizontal' : ''}`}> 
+      <div className={`${cardTypes[type]['innerClasses']} ${!expanded ? 'br2' : ''} ${expanded === 'vertical' ? 'br2 br--top' : ''} ${expanded === 'horizontal' ? 'br2 br--left' : ''}`}>
         <CardHeader type={type} meta={meta} />
         <CardBody title={title} author={author} />
         <CardFooter type={type} meta={meta} />
       </div>
-      <div className={`
-        ${expanded === 'vertical' ? `${extendedClasses} br--bottom` : null}
-        ${expanded === 'horizontal' ? `${extendedClasses} br--right` : null}
-      `}>
+      <div className={`${expanded === 'vertical' ? `${extendedClasses} br--bottom` : ''} ${expanded === 'horizontal' ? `${extendedClasses} br--right` : ''}`}
+        style={{height: 'auto', maxHeight: '475px'}}
+      >
         { expanded === 'vertical'
           ? (
             <div style={{height: '290px'}}>
