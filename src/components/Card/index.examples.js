@@ -1,6 +1,9 @@
 import React from 'react'
 import {storiesOf} from '@kadira/storybook'
-//import Card from '.'
+import CourseCard from './CourseCard'
+import LessonCard from './LessonCard'
+import PlaylistCard from './PlaylistCard'
+import testData from './testData'
 import './index.css'
 
 import imgCourseCard from './assets/temp/img-course-card.png'
@@ -9,6 +12,44 @@ import imgAngular from './assets/temp/angular.svg'
 import imgJs from './assets/temp/js.svg'
 
 const representClasses = 'flex justify-center items-center bg-dark-navy pv5'
+
+storiesOf('Cards')
+  .addWithInfo('Course Card', () => (
+    <div className={representClasses}>
+      <CourseCard title={testData.title} instructor={testData.instructor} meta={testData.meta} />
+    </div>
+  ))
+
+  .addWithInfo('Course Card Expanded Vertical', () => (
+    <div className={representClasses}>
+      <CourseCard title={testData.title}
+        instructor={testData.instructor}
+        meta={testData.meta}
+        expanded='vertical' />
+    </div>
+  ))
+
+  .addWithInfo('Course Card Expanded Horizontal', () => (
+    <div className={representClasses}>
+      <CourseCard title={testData.title}
+        instructor={testData.instructor}
+        meta={testData.meta}
+        expanded='horizontal' />
+    </div>
+  ))
+  
+
+  .addWithInfo('Lesson Card', () => (
+    <div className={representClasses}>
+      <LessonCard title={testData.title} instructor={testData.instructor} meta={testData.meta} />
+    </div>
+  ))
+
+  .addWithInfo('Playlist Card', () => (
+    <div className={representClasses}>
+      <PlaylistCard title={testData.title} instructor={testData.instructor} meta={testData.meta} />
+    </div>
+  ))
 
 storiesOf('Static: Cards')
   .addWithInfo('Course Card', () => (
